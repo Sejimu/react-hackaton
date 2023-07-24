@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
-import { ACTIONS } from "../utils/consts";
+import { ACTIONS, API } from "../utils/consts";
+import axios from "axios";
 
 const productContext = createContext();
 
@@ -28,7 +29,19 @@ function reducer(state, action) {
 //todo ------------------------------------------------------------------------------------
 function ProductContext({ children }) {
   const [state, dispatch] = useReducer(reducer, init);
-  const value = {};
+
+  async function getProducts() {
+    const { data } = await axios.get(API);
+    dispatch({
+      type: "products",
+      payload: data,
+    });
+  }
+
+  const value = {
+    products: state.products,
+    getProducts,
+  };
   return (
     <productContext.Provider value={value}>{children}</productContext.Provider>
   );
