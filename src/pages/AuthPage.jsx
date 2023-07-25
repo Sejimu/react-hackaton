@@ -43,7 +43,11 @@ export default function AuthPage() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container
+        component="main"
+        maxWidth="xs"
+        sx={{ height: "100vh", marginTop: "30px" }}
+      >
         <CssBaseline />
         <Box
           sx={{
@@ -56,7 +60,8 @@ export default function AuthPage() {
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
+
+          <Typography component="h1" variant="h5" sx={{ color: "#DAFFFB" }}>
             {isLogin ? "Sign in" : "Sign up"}
           </Typography>
           <Box
@@ -75,6 +80,7 @@ export default function AuthPage() {
                   label="Full name"
                   name="displayName"
                   autoFocus
+                  sx={{ backgroundColor: "#64CCC5" }}
                 />
                 <TextField
                   margin="normal"
@@ -83,6 +89,7 @@ export default function AuthPage() {
                   id="image"
                   label="Photo"
                   name="photoURL"
+                  sx={{ backgroundColor: "#64CCC5" }}
                 />
               </>
             )}
@@ -96,6 +103,7 @@ export default function AuthPage() {
               name="email"
               autoComplete="email"
               autoFocus
+              sx={{ backgroundColor: "#64CCC5" }}
             />
             <TextField
               margin="normal"
@@ -106,13 +114,19 @@ export default function AuthPage() {
               type="password"
               id="password"
               autoComplete="current-password"
+              sx={{ backgroundColor: "#64CCC5" }}
             />
 
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{
+                mt: 3,
+                mb: 2,
+                backgroundColor: "#DAFFFB",
+                color: "#001C30",
+              }}
             >
               {isLogin ? "Sign In" : "Sign Up"}
             </Button>

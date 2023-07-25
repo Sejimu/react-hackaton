@@ -28,8 +28,10 @@ function HomePage() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "#001C30",
+          backgroundColor: "#176B87",
           color: "#dafffb",
+          mt: "40px",
+          py: "15px",
         }}
       >
         <Pagination
