@@ -16,3 +16,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #001c30;
+  color: #fff;
+}
