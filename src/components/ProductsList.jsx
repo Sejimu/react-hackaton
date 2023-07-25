@@ -12,7 +12,7 @@ function ProductsList() {
 
   return (
     <Box sx={{ backgroundColor: "#001C30" }}>
-      <Typography variant="h3" sx={{ mb: "40px", pt: "30px" }}>
+      <Typography variant="h3" sx={{ mb: "40px", pt: "90px" }}>
         All Products
       </Typography>
       <Box
