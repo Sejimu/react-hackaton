@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { ACTIONS, API } from "../utils/consts";
 import axios from "axios";
+import { notify } from "../components/Toastify";
 
 const productContext = createContext();
 
@@ -47,12 +48,22 @@ function ProductContext({ children }) {
       payload: data,
     });
   }
-
+  async function deleteProduct(id) {
+    try {
+      await axios.delete(`${API}/${id}`);
+      getProducts();
+      notify("Successfully deleted");
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+      console.log(e);
+    }
+  }
   const value = {
     products: state.products,
     product: state.product,
     getProducts,
     addProduct,
+    deleteProduct,
   };
 
   return (
