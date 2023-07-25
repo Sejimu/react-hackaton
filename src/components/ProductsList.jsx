@@ -9,9 +9,10 @@ function ProductsList() {
     getProducts();
   }, []);
   console.log(products);
+
   return (
-    <Box>
-      <Typography variant="h3" sx={{ mb: "40px", mt: "30px" }}>
+    <Box sx={{ backgroundColor: "#001C30" }}>
+      <Typography variant="h3" sx={{ mb: "40px", pt: "30px" }}>
         All Products
       </Typography>
       <Box
