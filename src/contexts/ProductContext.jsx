@@ -34,11 +34,26 @@ function ProductContext({ children }) {
   const [state, dispatch] = useReducer(reducer, init);
 
   async function getProducts() {
-    const { data } = await axios.get(API);
-    dispatch({
-      type: ACTIONS.products,
-      payload: data,
-    });
+    try {
+      const { data } = await axios.get(API);
+      dispatch({
+        type: ACTIONS.products,
+        payload: data,
+      });
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+    }
+  }
+  async function getOneProduct(id) {
+    try {
+      const { data } = await axios.get(`${API}/${id}`);
+      dispatch({
+        type: ACTIONS.product,
+        payload: data,
+      });
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+    }
   }
 
   async function addProduct(newProduct) {
@@ -58,12 +73,24 @@ function ProductContext({ children }) {
       console.log(e);
     }
   }
+
+  async function updateProduct(id, newData) {
+    try {
+      await axios.patch(`${API}/${id}`, newData);
+      getProducts();
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+    }
+  }
+
   const value = {
     products: state.products,
     product: state.product,
     getProducts,
     addProduct,
     deleteProduct,
+    updateProduct,
+    getOneProduct,
   };
 
   return (

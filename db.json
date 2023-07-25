@@ -4,9 +4,9 @@
       "id": 1,
       "title": "Пример товара 1",
       "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
+      "description": "это еда очень вкусная",
+      "price": 1999,
+      "category": "спорт",
       "selected": true
     },
     {
@@ -31,9 +31,9 @@
       "id": 4,
       "title": "Пример товара 4",
       "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
+      "description": "Этот продукт сделает тебя  просто неотрЫФВАПРОПАВЫФфывапролрпавыфывапрололорьптаимвысвапролллорпаозимымфыварполрпавыфЫВАПРО",
+      "price": 59.99,
+      "category": "красота",
       "selected": false
     },
     {
@@ -41,8 +41,8 @@
       "title": "Пример товара 5",
       "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
       "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
+      "price": 2999.9,
+      "category": "красота",
       "selected": true
     },
     {
