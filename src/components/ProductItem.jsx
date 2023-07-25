@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 export default function ProductItem({ item }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, backgroundColor: "#176B87", color: "#dafffb" }}>
       <CardMedia sx={{ height: 140 }} image={item.photo} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -22,8 +22,12 @@ export default function ProductItem({ item }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small" sx={{ color: "#64CCC5" }}>
+          Share
+        </Button>
+        <Button size="small" sx={{ color: "#64CCC5" }}>
+          Learn More
+        </Button>
       </CardActions>
     </Card>
   );

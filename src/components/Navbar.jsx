@@ -27,8 +27,11 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+      <AppBar position="static"   sx={{
+          backgroundColor: "#001C30",
+        }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
