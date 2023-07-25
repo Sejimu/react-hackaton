@@ -21,27 +21,40 @@ function reducer(state, action) {
     case ACTIONS.product:
       return { ...state, product: action.payload };
 
+    case ACTIONS.addProduct:
+      return { ...state, products: [...state.products, action.payload] };
+
     default:
       return state;
   }
 }
 
-//todo ------------------------------------------------------------------------------------
 function ProductContext({ children }) {
   const [state, dispatch] = useReducer(reducer, init);
 
   async function getProducts() {
     const { data } = await axios.get(API);
     dispatch({
-      type: "products",
+      type: ACTIONS.products,
+      payload: data,
+    });
+  }
+
+  async function addProduct(newProduct) {
+    const { data } = await axios.post(API, newProduct);
+    dispatch({
+      type: ACTIONS.addProduct,
       payload: data,
     });
   }
 
   const value = {
     products: state.products,
+    product: state.product,
     getProducts,
+    addProduct,
   };
+
   return (
     <productContext.Provider value={value}>{children}</productContext.Provider>
   );

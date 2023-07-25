@@ -23,7 +23,7 @@
       "title": "Пример товара 3",
       "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
       "description": "Описание товара 3",
-      "price": 599.0,
+      "price": 599,
       "category": "мода",
       "selected": true
     },
@@ -50,7 +50,7 @@
       "title": "Пример товара 6",
       "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
       "description": "Описание товара 6",
-      "price": 79.0,
+      "price": 79,
       "category": "техника",
       "selected": false
     },
@@ -59,7 +59,7 @@
       "title": "Пример товара 7",
       "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
       "description": "Описание товара 7",
-      "price": 999.0,
+      "price": 999,
       "category": "мебель",
       "selected": true
     },
@@ -77,7 +77,7 @@
       "title": "Пример товара 9",
       "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
       "description": "Описание товара 9",
-      "price": 599.0,
+      "price": 599,
       "category": "мода",
       "selected": true
     },
