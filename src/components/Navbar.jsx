@@ -27,11 +27,15 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-      <AppBar position="static"   sx={{
+    <Box sx={{ display: { xs: "none", md: "flex" } }}>
+      <Box sx={{ flexGrow: 1 }} />
+      <AppBar
+        position="fixed"
+        sx={{
           backgroundColor: "#001C30",
-        }}>
+          top: "0",
+        }}
+      >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
@@ -74,7 +78,14 @@ export default function Navbar() {
             <InputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
-              sx={{ width: "400px" }}
+              sx={{
+                width: "400px",
+                marginRight: "100px",
+                color: "#DAFFFB",
+                backgroundColor: "#176B87",
+                borderRadius: "30px",
+                padding: "5px",
+              }}
             />
           </Box>
 
