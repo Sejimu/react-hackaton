@@ -24,10 +24,17 @@ export default function ProductItem({ item }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <Card sx={{ maxWidth: 345, backgroundColor: "#176B87", color: "#dafffb" }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        width: "270px",
+        height: "380px",
+        backgroundColor: "#176B87",
+        color: "#dafffb",
+      }}
+    >
       {
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton onClick={handleClick} aria-label="settings">
@@ -70,11 +77,16 @@ export default function ProductItem({ item }) {
           {item.category}
         </Typography>
         <Typography variant="h6" color="text.dark">
-          {item.description}
+          {item.description.slice(0, 25)}...
         </Typography>
       </CardContent>
-
-      <CardActions>
+      <CardActions
+        sx={{
+          display: "flex",
+          alignItems: "end",
+          justifyContent: "space-around",
+        }}
+      >
         <Button size="small" sx={{ color: "#64CCC5" }}>
           Share
         </Button>

@@ -15,7 +15,7 @@ export default function AddProducts() {
   const { addProduct } = useProductContext();
   const [formValue, setFormValue] = useState({
     title: "",
-    composition: "",
+    description: "",
     price: "",
     photo: "",
     category: "",
@@ -34,17 +34,17 @@ export default function AddProducts() {
       !formValue.title.trim() ||
       !formValue.price.trim() ||
       !formValue.photo.trim() ||
-      !formValue.composition.trim() ||
+      !formValue.description.trim() ||
       !formValue.category.trim()
     ) {
       return;
     }
 
-    addProduct({ ...formValue, price: +formValue.price });
+    addProduct({ ...formValue, price: +formValue.price, selected: false });
 
     setFormValue({
       title: "",
-      composition: "",
+      description: "",
       price: "",
       photo: "",
       category: "",
@@ -86,9 +86,9 @@ export default function AddProducts() {
               margin="normal"
               required
               fullWidth
-              name="composition"
+              name="description"
               label="Описание"
-              value={formValue.composition}
+              value={formValue.description}
               onChange={handleChange}
             />
 
@@ -120,14 +120,14 @@ export default function AddProducts() {
                 label="Категория"
                 name="category"
               >
-                <MenuItem value={"Книги"}>Книги</MenuItem>
-                <MenuItem value={"Мода"}>Мода</MenuItem>
-                <MenuItem value={"Красота"}>Красота</MenuItem>
-                <MenuItem value={"Мебель"}>Мебель</MenuItem>
-                <MenuItem value={"Техника"}>Техника</MenuItem>
-                <MenuItem value={"Спорт"}>Спорт</MenuItem>
-                <MenuItem value={"Электроника"}>Электроника</MenuItem>
-                <MenuItem value={"Недвижимость"}>Недвижимость</MenuItem>
+                <MenuItem value={"книги"}>Книги</MenuItem>
+                <MenuItem value={"мода"}>Мода</MenuItem>
+                <MenuItem value={"красота"}>Красота</MenuItem>
+                <MenuItem value={"мебель"}>Мебель</MenuItem>
+                <MenuItem value={"техника"}>Техника</MenuItem>
+                <MenuItem value={"спорт"}>Спорт</MenuItem>
+                <MenuItem value={"электроника"}>Электроника</MenuItem>
+                <MenuItem value={"недвижимость"}>Недвижимость</MenuItem>
               </Select>
             </FormControl>
 

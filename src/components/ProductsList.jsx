@@ -8,7 +8,6 @@ function ProductsList() {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
 
   return (
     <Box sx={{ backgroundColor: "#001C30" }}>
