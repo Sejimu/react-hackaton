@@ -7,4 +7,4 @@ export const ACTIONS = {
 export const API = "http://localhost:8000/products";
 
 export const ADMINS = ["krasavachic@gmail.com"];
-export const LIMIT = 8;
+export const LIMIT = 16;

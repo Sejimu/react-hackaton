@@ -36,7 +36,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ display: { xs: "none", md: "flex" } }}>
+    <Box sx={{ display: { md: "flex" } }}>
       <Box sx={{ flexGrow: 1 }} />
       <AppBar
         position="fixed"

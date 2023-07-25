@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useReducer, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { ACTIONS, API, LIMIT } from "../utils/consts";
 import axios from "axios";
 import { notify } from "../components/Toastify";
@@ -24,11 +30,9 @@ function reducer(state, action) {
     case ACTIONS.product:
       return { ...state, product: action.payload };
 
-    case ACTIONS.addProduct:
-      return { ...state, products: [...state.products, action.payload] };
-
     case ACTIONS.pageTotalCount:
       return { ...state, pageTotalCount: action.payload };
+
     default:
       return state;
   }
@@ -42,7 +46,7 @@ function ProductContext({ children }) {
   async function getProducts() {
     try {
       const { data, headers } = await axios.get(
-        `${API}${window.location.search} `
+        `${API}${window.location.search}  `
       );
       const totalCount = Math.ceil(headers["x-total-count"] / LIMIT);
 
@@ -59,23 +63,58 @@ function ProductContext({ children }) {
       notify(`${e.response.status}: ${e.response.statusText}`, "error");
     }
   }
+  // useEffect(() => {
+  //   setSearchParams({ _page: page });
+  // }, [page, setSearchParams]);
+
+  async function getOneProduct(id) {
+    try {
+      const { data } = await axios.get(`${API}/${id}`);
+      dispatch({
+        type: ACTIONS.product,
+        payload: data,
+      });
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+    }
+  }
 
   async function addProduct(newProduct) {
-    const { data } = await axios.post(API, newProduct);
-    dispatch({
-      type: ACTIONS.addProduct,
-      payload: data,
-    });
+    await axios.post(API, newProduct);
+
+    getProducts();
+  }
+  async function deleteProduct(id) {
+    try {
+      await axios.delete(`${API}/${id}`);
+      getProducts();
+      notify("Successfully deleted");
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+      console.log(e);
+    }
+  }
+
+  async function updateProduct(id, newData) {
+    try {
+      await axios.patch(`${API}/${id}`, newData);
+      getProducts();
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+    }
   }
 
   const value = {
-    page,
     products: state.products,
     product: state.product,
     getProducts,
     addProduct,
-    pageTotalCount: state.pageTotalCount,
+    deleteProduct,
+    updateProduct,
+    getOneProduct,
     setPage,
+    page,
+    pageTotalCount: state.pageTotalCount,
   };
 
   return (

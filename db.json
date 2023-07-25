@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true
-    },
-    {
       "id": 2,
       "title": "Пример товара 2",
       "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
@@ -899,6 +890,24 @@
       "price": 49.99,
       "category": "книги",
       "selected": false
+    },
+    {
+      "title": "sdf",
+      "description": "sdf",
+      "price": 2345,
+      "photo": "werg",
+      "category": "книги",
+      "selected": false,
+      "id": 101
+    },
+    {
+      "title": "asdfg",
+      "description": "sdfgh",
+      "price": 12345,
+      "photo": "asdfgh",
+      "category": "красота",
+      "selected": false,
+      "id": 102
     }
   ]
 }

@@ -59,7 +59,7 @@ export default function EditPage() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Box
           sx={{
@@ -67,6 +67,7 @@ export default function EditPage() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            color: "#DAFFFB",
           }}
         >
           <Typography component="h1" variant="h5">
@@ -76,7 +77,7 @@ export default function EditPage() {
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ mt: 1 }}
+            sx={{ color: "#DAFFFB", mt: 1 }}
           >
             <TextField
               margin="normal"
@@ -87,6 +88,7 @@ export default function EditPage() {
               autoFocus
               value={formValue.title}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5" }}
             />
             <TextField
               margin="normal"
@@ -96,6 +98,7 @@ export default function EditPage() {
               label="Описание"
               value={formValue.description}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5" }}
             />
 
             <TextField
@@ -107,6 +110,7 @@ export default function EditPage() {
               type="number"
               value={formValue.price}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5" }}
             />
             <TextField
               margin="normal"
@@ -116,6 +120,7 @@ export default function EditPage() {
               label="Url"
               value={formValue.photo}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5", mb: "25px" }}
             />
 
             <FormControl fullWidth>
@@ -125,6 +130,7 @@ export default function EditPage() {
                 onChange={handleChange}
                 label="Категория"
                 name="category"
+                sx={{ backgroundColor: "#64CCC5" }}
               >
                 <MenuItem value={"книги"}>Книги</MenuItem>
                 <MenuItem value={"мода"}>Мода</MenuItem>

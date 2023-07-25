@@ -4,7 +4,7 @@ import MainRoute from "./routes/MainRoute";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#001C30" }}>
       <MainRoute />
     </div>
   );

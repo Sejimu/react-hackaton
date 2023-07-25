@@ -8,10 +8,12 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useProductContext } from "../contexts/ProductContext";
+import { useNavigate } from "react-router-dom";
 
 const defaultTheme = createTheme();
 
 export default function AddProducts() {
+  const navigate = useNavigate();
   const { addProduct } = useProductContext();
   const [formValue, setFormValue] = useState({
     title: "",
@@ -42,18 +44,16 @@ export default function AddProducts() {
 
     addProduct({ ...formValue, price: +formValue.price, selected: false });
 
-    setFormValue({
-      title: "",
-      description: "",
-      price: "",
-      photo: "",
-      category: "",
-    });
+    navigate("/");
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container
+        component="main"
+        maxWidth="xs"
+        sx={{ color: "#DAFFFB", backgroundColor: "#001C30", height: "100vh" }}
+      >
         <CssBaseline />
         <Box
           sx={{
@@ -61,6 +61,8 @@ export default function AddProducts() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            pt: "40px",
+            color: "#DAFFFB",
           }}
         >
           <Typography component="h1" variant="h5">
@@ -70,7 +72,7 @@ export default function AddProducts() {
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ mt: 1 }}
+            sx={{ color: "#DAFFFB", mt: 1 }}
           >
             <TextField
               margin="normal"
@@ -81,6 +83,7 @@ export default function AddProducts() {
               autoFocus
               value={formValue.title}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5" }}
             />
             <TextField
               margin="normal"
@@ -90,6 +93,7 @@ export default function AddProducts() {
               label="Описание"
               value={formValue.description}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5" }}
             />
 
             <TextField
@@ -101,6 +105,7 @@ export default function AddProducts() {
               type="number"
               value={formValue.price}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5" }}
             />
             <TextField
               margin="normal"
@@ -110,6 +115,7 @@ export default function AddProducts() {
               label="Url"
               value={formValue.photo}
               onChange={handleChange}
+              sx={{ backgroundColor: "#64CCC5", mb: "25px" }}
             />
 
             <FormControl fullWidth>
@@ -119,6 +125,9 @@ export default function AddProducts() {
                 onChange={handleChange}
                 label="Категория"
                 name="category"
+                sx={{
+                  backgroundColor: "#64CCC5",
+                }}
               >
                 <MenuItem value={"книги"}>Книги</MenuItem>
                 <MenuItem value={"мода"}>Мода</MenuItem>
@@ -135,7 +144,12 @@ export default function AddProducts() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{
+                mt: 3,
+                mb: 2,
+                backgroundColor: "#DAFFFB",
+                color: "#001C30",
+              }}
             >
               Добавить новый продукт
             </Button>
