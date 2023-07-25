@@ -4,3 +4,5 @@ export const ACTIONS = {
 };
 
 export const API = "http://localhost:8000/products";
+
+export const ADMINS = ["krasavachic@gmail.com"];

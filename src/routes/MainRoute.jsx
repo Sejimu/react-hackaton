@@ -6,6 +6,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import DetailsPage from "../pages/DetailsPage";
 import EditPage from "../pages/EditPage";
 import AddProducts from "../pages/AddProducts";
+import AuthPage from "../pages/AuthPage";
 
 function MainRoute() {
   return (
@@ -13,6 +14,7 @@ function MainRoute() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/add" element={<AddProducts />} />
+        <Route path="/auth" element={<AuthPage/>} />
         <Route path="/edit/:id" element={<EditPage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
       </Route>
