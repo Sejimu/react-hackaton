@@ -131,7 +131,6 @@ export default function Navbar() {
                   aria-haspopup="true"
                   id="demo-positioned-button"
                   aria-controls={open ? "demo-positioned-menu" : undefined}
-                  // aria-haspopup="true"
                   aria-expanded={open ? "true" : undefined}
                   onClick={handleClick}
                   color="inherit"
