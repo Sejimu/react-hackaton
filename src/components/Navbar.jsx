@@ -1,27 +1,20 @@
-import React, { useEffect } from "react";
-import {
-  Link,
-  NavLink,
-  useLocation,
-  useNavigate,
-  useSearchParams,
-} from "react-router-dom";
+import React from "react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
-import InputBase from "@mui/material/InputBase";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAuthContext } from "../contexts/AuthContext";
 import { Avatar, Button } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useProductContext } from "../contexts/ProductContext";
+import LiveSearch from "./LiveSearch";
 
 const pages = [
   {
@@ -80,7 +73,7 @@ export default function Navbar() {
                 color: "inherit",
               }}
             >
-              MUI
+              OFOFO
             </Typography>
             <Box sx={{ display: "flex", ml: 2 }}>
               {pages.map((page) => (
@@ -95,22 +88,7 @@ export default function Navbar() {
               ))}
             </Box>
           </Box>
-          <Box sx={{ display: "flex", ml: 2, alignItems: "center" }}>
-            <SearchIcon />
-            <InputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-              sx={{
-                width: "400px",
-                marginRight: "100px",
-                color: "#DAFFFB",
-                backgroundColor: "#176B87",
-                borderRadius: "30px",
-                padding: "5px",
-              }}
-            />
-          </Box>
-
+          <LiveSearch />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
