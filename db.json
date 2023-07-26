@@ -11,7 +11,7 @@
     },
     {
       "id": 3,
-      "title": "Пример товара 3",
+      "title": "dfghjhtrewq",
       "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
       "description": "Описание товара 3",
       "price": 599,
@@ -22,7 +22,7 @@
       "id": 4,
       "title": "Пример товара 4",
       "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
+      "description": "sdfghjkjhgfdsa",
       "price": 49.99,
       "category": "книги",
       "selected": false
@@ -712,15 +712,6 @@
       "selected": false
     },
     {
-      "id": 81,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true
-    },
-    {
       "id": 82,
       "title": "Пример товара 2",
       "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
@@ -890,24 +881,6 @@
       "price": 49.99,
       "category": "книги",
       "selected": false
-    },
-    {
-      "title": "sdf",
-      "description": "sdf",
-      "price": 2345,
-      "photo": "werg",
-      "category": "книги",
-      "selected": false,
-      "id": 101
-    },
-    {
-      "title": "asdfg",
-      "description": "sdfgh",
-      "price": 12345,
-      "photo": "asdfgh",
-      "category": "красота",
-      "selected": false,
-      "id": 102
     }
   ]
 }

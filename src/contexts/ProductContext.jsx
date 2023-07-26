@@ -43,12 +43,14 @@ function ProductContext({ children }) {
   const [state, dispatch] = useReducer(reducer, init);
   const [page, setPage] = useState(+searchParams.get("_page") || 1);
 
+  const currentParams = Object.fromEntries([...searchParams]);
   async function getProducts() {
     try {
       const { data, headers } = await axios.get(
         `${API}${window.location.search}  `
       );
       const totalCount = Math.ceil(headers["x-total-count"] / LIMIT);
+      // console.log(window.location.search);
 
       dispatch({
         type: ACTIONS.pageTotalCount,
@@ -115,6 +117,7 @@ function ProductContext({ children }) {
     setPage,
     page,
     pageTotalCount: state.pageTotalCount,
+    currentParams,
   };
 
   return (
