@@ -6,8 +6,13 @@ import { Box, Typography } from "@mui/material";
 function ProductsList() {
   const { getProducts, products } = useProductContext();
   useEffect(() => {
-    getProducts();
+    setTimeout(() => {
+      getProducts();
+    }, 50);
   }, []);
+  // useEffect(() => {
+  //   window.location.reload();
+  // }, [products]);
 
   return (
     <Box sx={{ backgroundColor: "#001C30" }}>

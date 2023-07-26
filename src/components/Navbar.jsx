@@ -1,5 +1,11 @@
-import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  Link,
+  NavLink,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
@@ -15,6 +21,7 @@ import { useAuthContext } from "../contexts/AuthContext";
 import { Avatar, Button } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useProductContext } from "../contexts/ProductContext";
 
 const pages = [
   {
@@ -26,6 +33,8 @@ const pages = [
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();
   const location = useLocation();
+  const navigate = useNavigate();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -59,8 +68,8 @@ export default function Navbar() {
             <Typography
               variant="h6"
               noWrap
-              component={Link}
-              to="/"
+              component={Box}
+              onClick={() => navigate(-1)}
               sx={{
                 display: { xs: "none", sm: "block" },
                 textDecoration: "none",

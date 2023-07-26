@@ -38,7 +38,7 @@ export default function ProductItem({ item }) {
       {
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton onClick={handleClick} aria-label="settings">
-            <MoreVertIcon />
+            <MoreVertIcon sx={{ color: "#64CCC5" }} />
           </IconButton>
           <Menu
             id="basic-menu"
