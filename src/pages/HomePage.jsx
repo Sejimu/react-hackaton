@@ -4,6 +4,7 @@ import { Box, Pagination } from "@mui/material";
 import { LIMIT } from "../utils/consts";
 import { useSearchParams } from "react-router-dom";
 import { useProductContext } from "../contexts/ProductContext";
+import Footer from "../components/Footer";
 
 function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,7 +31,6 @@ function HomePage() {
           justifyContent: "center",
           backgroundColor: "#176B87",
           color: "#dafffb",
-          mt: "40px",
           py: "15px",
         }}
       >
@@ -41,6 +41,7 @@ function HomePage() {
           color="primary"
         />
       </Box>
+      <Footer />
     </div>
   );
 }

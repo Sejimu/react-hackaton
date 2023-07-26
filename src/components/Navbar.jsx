@@ -32,6 +32,7 @@ const pages = [
 
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();
+  const { setPage } = useProductContext();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -69,7 +70,10 @@ export default function Navbar() {
               variant="h6"
               noWrap
               component={Box}
-              onClick={() => navigate(-1)}
+              onClick={() => {
+                setPage(1);
+                navigate("/");
+              }}
               sx={{
                 display: { xs: "none", sm: "block" },
                 textDecoration: "none",
