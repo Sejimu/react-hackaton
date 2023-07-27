@@ -269,7 +269,6 @@ footer {
   .details {
     width: 95vw;
     min-height: 100vh;
-    border: 2px solid red;
     margin: 0 auto;
     display: flex;
     flex-flow: column;
@@ -277,7 +276,6 @@ footer {
   .first_block {
     width: 100%;
     min-height: 90vh;
-    background-color: aqua;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -285,7 +283,6 @@ footer {
   .first_block_item_first {
     width: 100%;
     height: 50vh;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,17 +297,18 @@ footer {
   }
   .first_block_item_second {
     margin-left: 0;
-    width: 60%;
-    min-height: 50vh;
-    background-color: rgb(138, 25, 25);
-    border-radius: 0;
+    margin-top: 20px;
+    width: 80%;
+    min-height: 20vh;
+    border-radius: 15px;
     overflow: hidden;
+    border: 2px solid white;
   }
   .second_block {
-    width: 60%;
+    width: 80%;
     margin: 0% auto;
+    margin-top: 20px;
     min-height: 30vh;
-    background-color: rgb(255, 0, 0);
   }
   .comments {
     width: 95vw;
@@ -329,10 +327,10 @@ footer {
   .first_block_item_second {
     width: 90%;
 
-    border-radius: 0;
+    border-radius: 15px;
   }
   .second_block {
-    width: 90%;
+    width: 85vw;
   }
 }
 
