@@ -20,9 +20,9 @@
     },
     {
       "id": 4,
-      "title": "Пример товара 4",
+      "title": "qwertyuiolра 4",
       "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
+      "description": "asdfghjk",
       "price": 49.99,
       "category": "книги",
       "selected": false
@@ -53,15 +53,6 @@
       "price": 1000,
       "category": "мебель",
       "selected": true
-    },
-    {
-      "id": 8,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false
     },
     {
       "id": 9,
@@ -882,5 +873,8 @@
       "category": "книги",
       "selected": false
     }
-  ]
+  ],
+  "users": [],
+  "favorite": [],
+  "comments": []
 }

@@ -48,7 +48,6 @@ function AuthContext({ children }) {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user);
       setUser(user);
     });
   }, []);

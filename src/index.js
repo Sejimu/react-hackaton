@@ -9,21 +9,24 @@ import AuthContext from "./contexts/AuthContext";
 import FavouriteContext from "./contexts/FavouriteContext";
 import CommentsContext from "./contexts/CommentsContext";
 import CartContext from "./contexts/CartContext";
+import UserContext from "./contexts/UserContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <AuthContext>
-      <CartContext>
-        <FavouriteContext>
-          <ProductContext>
-            <CommentsContext>
-              <Toastify />
-              <App />
-            </CommentsContext>
-          </ProductContext>
-        </FavouriteContext>
-      </CartContext>
+      <UserContext>
+        <CartContext>
+          <FavouriteContext>
+            <ProductContext>
+              <CommentsContext>
+                <Toastify />
+                <App />
+              </CommentsContext>
+            </ProductContext>
+          </FavouriteContext>
+        </CartContext>
+      </UserContext>
     </AuthContext>
   </BrowserRouter>
 );
