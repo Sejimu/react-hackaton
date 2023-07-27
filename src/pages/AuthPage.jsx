@@ -14,12 +14,14 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useAuthContext } from "../contexts/AuthContext";
 import { Navigate } from "react-router-dom";
+import { useUserContext } from "../contexts/UserContext";
 
 const defaultTheme = createTheme();
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = React.useState(true);
   const { user, register, login } = useAuthContext();
+  const { users, getUsers, addUser } = useUserContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,8 +34,16 @@ export default function AuthPage() {
         data.get("email"),
         data.get("password"),
         data.get("displayName"),
-        data.get("photoURL")
+        data.get("photoURL"),
+        data.get("phone")
       );
+      const newUser = {
+        email: data.get("email"),
+        name: data.get("displayName"),
+        photoURL: data.get("photoURL"),
+        phone: data.get("phone"),
+      };
+      addUser(newUser);
     }
   };
 
@@ -91,6 +101,16 @@ export default function AuthPage() {
                   name="photoURL"
                   sx={{ backgroundColor: "#64CCC5" }}
                 />
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="phone"
+                  label="phone"
+                  name="phone"
+                  sx={{ backgroundColor: "#64CCC5" }}
+                />
+                phone
               </>
             )}
 
