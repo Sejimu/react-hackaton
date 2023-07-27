@@ -874,7 +874,65 @@
       "selected": false
     }
   ],
-  "users": [],
-  "favorite": [],
-  "comments": []
+  "users": [
+    {
+      "email": "qwerty@gmail.com",
+      "name": "asdfgh",
+      "photoURL": "https://yandex.ru/images/search?text=photo&img_url=https%3A%2F%2Fmicrosac.es%2Fwp-content%2Fuploads%2F2019%2F06%2F8V1z7D_t20_YX6vKm.jpg&pos=1&rpt=simage&stype=image&lr=10309&parent-reqid=1690172605685062-2776656752508456060-balancer-l7leveler-kubr-yp-sas-26-BAL-9771&source=serp",
+      "phone": "123456",
+      "id": 1
+    },
+    {
+      "email": "poiuyt@gmail.com",
+      "name": "nursultan",
+      "photoURL": "https://yandex.ru/images/search?text=photo&img_url=https%3A%2F%2Fmicrosac.es%2Fwp-content%2Fuploads%2F2019%2F06%2F8V1z7D_t20_YX6vKm.jpg&pos=1&rpt=simage&stype=image&lr=10309&parent-reqid=1690172605685062-2776656752508456060-balancer-l7leveler-kubr-yp-sas-26-BAL-9771&source=serp",
+      "phone": "123456",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "productId": "12",
+      "comment": "qwertytrewq",
+      "userEmail": "poiuyt@gmail.com",
+      "id": 1
+    },
+    {
+      "productId": "11",
+      "comment": "qwertyuiiuytrewqwertyui",
+      "userEmail": "poiuyt@gmail.com",
+      "id": 2
+    },
+    {
+      "productId": "2",
+      "comment": "говно ваш продукт\n",
+      "userEmail": "poiuyt@gmail.com",
+      "id": 3
+    },
+    {
+      "productId": "2",
+      "comment": "не говно\n",
+      "userEmail": "poiuyt@gmail.com",
+      "id": 4
+    },
+    {
+      "productId": "3",
+      "comment": "цукапавыфйцукерпкуц",
+      "userEmail": "poiuyt@gmail.com",
+      "id": 5
+    },
+    {
+      "productId": "2",
+      "comment": "qwertyuytrew",
+      "userEmail": "krasavachic@gmail.com",
+      "id": 6
+    },
+    {
+      "productId": "2",
+      "comment": "qw3ertyutr",
+      "userEmail": "krasavachic@gmail.com",
+      "id": 7
+    }
+  ],
+  "favorite": []
 }

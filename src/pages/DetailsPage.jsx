@@ -2,10 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useProductContext } from "../contexts/ProductContext";
 import { useParams } from "react-router-dom";
 import Details from "../components/Details";
+import { useAuthContext } from "../contexts/AuthContext";
 
 function DetailsPage() {
   const { getOneDetails, details } = useProductContext();
   const [item, setItem] = useState(null);
+  const { user } = useAuthContext();
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    setUserInfo(user);
+  }, [user]);
+
+  console.log(userInfo);
 
   const { id } = useParams();
   useEffect(() => {
@@ -15,7 +24,6 @@ function DetailsPage() {
   useEffect(() => {
     if (details) {
       setItem(details);
-      console.log(details);
     }
   }, [details]);
 
