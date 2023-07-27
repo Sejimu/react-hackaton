@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { notify } from "../components/Toastify";
 
 const cartContext = createContext();
@@ -28,7 +28,6 @@ function CartContext({ children }) {
 
   function getCart() {
     const data = getCartFromLS();
-
     setCart(data);
   }
 

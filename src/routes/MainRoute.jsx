@@ -8,18 +8,24 @@ import AddProducts from "../pages/AddProducts";
 import AuthPage from "../pages/AuthPage";
 import DetailsPage from "../pages/DetailsPage";
 import CartPage from "../pages/CartPage";
+import UserProtectedRoute from "./UserProtectedRoute";
+import AdminProtectedRoute from "./AdminProtectedRoute";
 
 function MainRoute() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/add" element={<AddProducts />} />
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="/edit/:id" element={<EditPage />} />
+        <Route element={<AdminProtectedRoute />}>
+          <Route path="/add" element={<AddProducts />} />
+          <Route path="/edit/:id" element={<EditPage />} />
+        </Route>
         <Route path="/details/:id" element={<DetailsPage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route element={<UserProtectedRoute />}>
+          <Route path="/cart" element={<CartPage />} />
+        </Route>
       </Route>
+      <Route path="/auth" element={<AuthPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

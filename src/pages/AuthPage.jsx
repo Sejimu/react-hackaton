@@ -46,7 +46,7 @@ export default function AuthPage() {
       <Container
         component="main"
         maxWidth="xs"
-        sx={{ height: "100vh", marginTop: "30px" }}
+        sx={{ height: "100vh", paddingTop: "30px" }}
       >
         <CssBaseline />
         <Box

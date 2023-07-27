@@ -2,8 +2,10 @@ import { Typography } from "@mui/material";
 import React from "react";
 import { useProductContext } from "../contexts/ProductContext";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const Details = ({ item }) => {
+  const { isAdmin } = useAuthContext();
   const { deleteProduct } = useProductContext();
   const navigate = useNavigate();
 
@@ -20,26 +22,30 @@ const Details = ({ item }) => {
             <p>{item.price} $ </p>
           </div>
           <div></div>
-          <div className="buttonsholder">
-            <button
-              className="DeleteDetails"
-              onClick={() => {
-                const a = window.confirm("Are you sure?");
-                if (a) {
-                  deleteProduct(item.id);
-                  navigate(-1);
-                }
-              }}
-            >
-              Delete
-            </button>
-            <button
-              onClick={() => navigate(`/edit/${item.id}`)}
-              className="EditDetails"
-            >
-              Edit
-            </button>
-          </div>
+          {isAdmin() ? (
+            <div className="buttonsholder">
+              <button
+                className="DeleteDetails"
+                onClick={() => {
+                  const a = window.confirm("Are you sure?");
+                  if (a) {
+                    deleteProduct(item.id);
+                    navigate(-1);
+                  }
+                }}
+              >
+                Delete
+              </button>
+              <button
+                onClick={() => navigate(`/edit/${item.id}`)}
+                className="EditDetails"
+              >
+                Edit
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
 

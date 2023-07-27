@@ -84,12 +84,12 @@ footer {
   width: 100%;
   height: 35vh;
   border-top: 2px solid rgb(255, 255, 255);
-
-  border-bottom: 2px solid rgb(255, 255, 255);
 }
 .first_block_item_second div:nth-child(3) {
   width: 100%;
   height: 35vh;
+
+  border-top: 2px solid rgb(255, 255, 255);
 }
 
 .second_block {
