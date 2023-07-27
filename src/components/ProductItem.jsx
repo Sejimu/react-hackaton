@@ -12,9 +12,14 @@ import { useNavigate } from "react-router-dom";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import IconButton from "@mui/material/IconButton";
 import { useProductContext } from "../contexts/ProductContext";
+import { useCartContext } from "../contexts/CartContext";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 
 export default function ProductItem({ item }) {
   const { deleteProduct } = useProductContext();
+  const { addProductToCart, isAlreadyInCart, deleteProductFromCart } =
+    useCartContext();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -87,9 +92,18 @@ export default function ProductItem({ item }) {
           justifyContent: "space-around",
         }}
       >
-        <Button size="small" sx={{ color: "#64CCC5" }}>
-          Share
-        </Button>
+        {isAlreadyInCart(item.id) ? (
+          <IconButton
+            onClick={() => deleteProductFromCart(item.id)}
+            aria-label="share"
+          >
+            <RemoveShoppingCartIcon color="error" />
+          </IconButton>
+        ) : (
+          <IconButton onClick={() => addProductToCart(item)} aria-label="share">
+            <AddShoppingCartIcon color="primary" />
+          </IconButton>
+        )}
         <Button size="small" sx={{ color: "#64CCC5" }}>
           Learn More
         </Button>

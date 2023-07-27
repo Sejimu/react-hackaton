@@ -1,5 +1,11 @@
-import React from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  Link,
+  NavLink,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
@@ -15,6 +21,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useProductContext } from "../contexts/ProductContext";
 import LiveSearch from "./LiveSearch";
+import { useCartContext } from "../contexts/CartContext";
 
 const pages = [
   {
@@ -26,8 +33,14 @@ const pages = [
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();
   const { setPage } = useProductContext();
+  const { cart, getCart } = useCartContext();
   const location = useLocation();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    getCart();
+  }, []);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -94,8 +107,10 @@ export default function Navbar() {
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
+              component={Link}
+              to="/cart"
             >
-              <Badge badgeContent={3} color="error">
+              <Badge badgeContent={cart.products.length} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
