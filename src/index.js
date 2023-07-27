@@ -7,6 +7,7 @@ import Toastify from "./components/Toastify";
 import ProductContext from "./contexts/ProductContext";
 import AuthContext from "./contexts/AuthContext";
 import FavouriteContext from "./contexts/FavouriteContext";
+import CommentsContext from "./contexts/CommentsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,8 +15,10 @@ root.render(
     <AuthContext>
       <FavouriteContext>
         <ProductContext>
-          <Toastify />
-          <App />
+          <CommentsContext>
+            <Toastify />
+            <App />
+          </CommentsContext>
         </ProductContext>
       </FavouriteContext>
     </AuthContext>

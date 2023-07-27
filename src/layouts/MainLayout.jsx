@@ -16,7 +16,7 @@ function MainLayout() {
         }}
       >
         <Outlet />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

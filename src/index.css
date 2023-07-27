@@ -23,3 +23,328 @@ footer {
   background-color: #001c30;
   color: #fff;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.details {
+  width: 75vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.first_block {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first_block_item_first {
+  width: 60%;
+  height: 90vh;
+  background-color: #dafffb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.first_block_item_first img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 60%;
+  height: 60%;
+}
+.first_block_item_second {
+  margin-left: 40px;
+  width: 35%;
+  min-height: 90vh;
+  /* border: 2px solid white; */
+  border-left: 10px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.first_block_item_second div:nth-child(1) {
+  width: 100%;
+  height: 20vh;
+  color: rgb(255, 255, 255);
+}
+.first_block_item_second div:nth-child(2) {
+  width: 100%;
+  height: 35vh;
+  border-top: 2px solid rgb(255, 255, 255);
+
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.first_block_item_second div:nth-child(3) {
+  width: 100%;
+  height: 35vh;
+}
+
+.second_block {
+  width: 100%;
+  margin-top: 30px;
+  min-height: 30vh;
+  background-color: #dafffb;
+  border-radius: 15px;
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.first_block_item_second_div {
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.comments {
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border: 2px solid black;
+}
+.comments_input {
+  border: 2px solid black;
+  width: 100%;
+}
+.comments_input_box {
+  margin: 0 auto;
+  border: 2px red solid;
+  width: 60%;
+}
+.comments_input_first {
+  display: flex;
+  align-items: center;
+}
+.comments_input_first p {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.comments_input button {
+  width: 200px;
+  height: 35px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+}
+.comments_input_second textarea {
+  width: 60%;
+  font-size: 20px;
+}
+
+/* todo kube start */
+.cube-container {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+  margin: 50px auto;
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 8s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  text-align: center;
+  line-height: 200px;
+  background: transparent;
+  opacity: 0.9;
+  border: 2px solid;
+  border-image: linear-gradient(
+      to right,
+      #ff6b6b,
+      #355c7d,
+      #557d35,
+      #cfcf16,
+      #a51f1f
+    )
+    1;
+  box-shadow: 0 0 100px rgba(41, 18, 143, 0.8);
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube-container:hover .cube {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* todo kube end */
+.buttonsholder {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.DeleteDetails {
+  background-color: #64ccc5;
+
+  border-radius: 6px;
+  border: none;
+  color: white;
+  height: 35px;
+  width: 150px;
+}
+.EditDetails {
+  background-color: #176b87;
+  border-radius: 6px;
+  margin-top: 5px;
+  border: none;
+  color: white;
+  height: 35px;
+  width: 150px;
+}
+.DeleteDetails:hover {
+  border: 2px solid white;
+}
+.EditDetails:hover {
+  border: 2px solid white;
+}
+
+/* !==========================================768======================================== */
+@media screen and (max-width: 768px) {
+  .details {
+    width: 95vw;
+    min-height: 100vh;
+    border: 2px solid red;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+  }
+  .first_block {
+    width: 100%;
+    min-height: 90vh;
+    background-color: aqua;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .first_block_item_first {
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .first_block_item_first img {
+    max-width: 60%;
+    width: 60%;
+    max-height: 100%;
+    height: 100%;
+  }
+  .first_block_item_second {
+    margin-left: 0;
+    width: 60%;
+    min-height: 50vh;
+    background-color: rgb(138, 25, 25);
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .second_block {
+    width: 60%;
+    margin: 0% auto;
+    min-height: 30vh;
+    background-color: rgb(255, 0, 0);
+  }
+  .comments {
+    width: 95vw;
+  }
+}
+
+/* !==========================================500======================================== */
+@media screen and (max-width: 500px) {
+  .first_block_item_first img {
+    max-width: 70%;
+    width: 70%;
+    max-height: 100%;
+    height: 100%;
+  }
+
+  .first_block_item_second {
+    width: 90%;
+
+    border-radius: 0;
+  }
+  .second_block {
+    width: 90%;
+  }
+}
+
+/* !==========================================425======================================== */
+@media screen and (max-width: 425px) {
+  .first_block_item_first img {
+    max-width: 90%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+  .first_block_item_first {
+    height: 40vh;
+  }
+}

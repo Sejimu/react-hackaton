@@ -881,6 +881,15 @@
       "price": 49.99,
       "category": "книги",
       "selected": false
+    },
+    {
+      "title": "dewdewdwe",
+      "description": "ewdewd",
+      "price": 111,
+      "photo": "xdas",
+      "category": "мода",
+      "selected": false,
+      "id": 101
     }
   ]
 }

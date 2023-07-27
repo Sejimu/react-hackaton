@@ -42,6 +42,7 @@ function ProductContext({ children }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [state, dispatch] = useReducer(reducer, init);
   const [page, setPage] = useState(+searchParams.get("_page") || 1);
+  const [details, setDetails] = useState(null);
 
   const currentParams = Object.fromEntries([...searchParams]);
   async function getProducts() {
@@ -65,9 +66,6 @@ function ProductContext({ children }) {
       notify(`${e.response.status}: ${e.response.statusText}`, "error");
     }
   }
-  // useEffect(() => {
-  //   setSearchParams({ _page: page });
-  // }, [page, setSearchParams]);
 
   async function getOneProduct(id) {
     try {
@@ -106,9 +104,17 @@ function ProductContext({ children }) {
     }
   }
 
+  async function getOneDetails(id) {
+    const { data } = await axios(`${API}/${id}`);
+
+    setDetails(data);
+  }
+
   const value = {
     products: state.products,
     product: state.product,
+    getOneDetails,
+    details,
     getProducts,
     addProduct,
     deleteProduct,
