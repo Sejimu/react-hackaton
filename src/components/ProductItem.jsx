@@ -58,7 +58,12 @@ export default function ProductItem({ item }) {
               component={Button}
               endIcon={<DeleteIcon />}
               sx={{ textTransform: "capitalize", color: "red" }}
-              onClick={() => deleteProduct(item.id)}
+              onClick={() => {
+                const a = window.confirm("Are you sure?");
+                if (a) {
+                  deleteProduct(item.id);
+                }
+              }}
             >
               Delete
             </MenuItem>
