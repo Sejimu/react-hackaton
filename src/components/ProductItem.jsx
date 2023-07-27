@@ -43,7 +43,7 @@ export default function ProductItem({ item }) {
       {
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton onClick={handleClick} aria-label="settings">
-            <MoreVertIcon sx={{ color: "#64CCC5" }} />
+            <MoreVertIcon />
           </IconButton>
           <Menu
             id="basic-menu"
@@ -73,7 +73,13 @@ export default function ProductItem({ item }) {
           </Menu>
         </Box>
       }
-      <CardMedia sx={{ height: 140 }} image={item.photo} title="green iguana" />
+      <CardMedia
+        sx={{ height: 140 }}
+        onClick={() => navigate(`/details/${item.id}`)}
+        image={item.photo}
+        title="green iguana"
+      />
+
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.price}$

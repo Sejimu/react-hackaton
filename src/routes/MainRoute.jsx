@@ -3,10 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
-import DetailsPage from "../pages/DetailsPage";
 import EditPage from "../pages/EditPage";
 import AddProducts from "../pages/AddProducts";
 import AuthPage from "../pages/AuthPage";
+import DetailsPage from "../pages/DetailsPage";
 import CartPage from "../pages/CartPage";
 
 function MainRoute() {
