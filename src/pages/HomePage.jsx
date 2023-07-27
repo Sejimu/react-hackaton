@@ -4,6 +4,8 @@ import { Box, Pagination } from "@mui/material";
 import { LIMIT } from "../utils/consts";
 import { useSearchParams } from "react-router-dom";
 import { useProductContext } from "../contexts/ProductContext";
+import Footer from "../components/Footer";
+import Filter from "../components/Filter";
 
 function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -23,6 +25,16 @@ function HomePage() {
   }, [page]);
   return (
     <div>
+      <Box
+        sx={{
+          maxWidth: "max-content",
+          margin: "30px auto",
+          marginTop: "100px",
+          background: "white",
+        }}
+      >
+        <Filter />
+      </Box>
       <ProductsList />
       <Box
         sx={{
@@ -30,7 +42,6 @@ function HomePage() {
           justifyContent: "center",
           backgroundColor: "#176B87",
           color: "#dafffb",
-          mt: "40px",
           py: "15px",
         }}
       >
@@ -41,6 +52,7 @@ function HomePage() {
           color="primary"
         />
       </Box>
+      <Footer />
     </div>
   );
 }

@@ -10,18 +10,18 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
-import InputBase from "@mui/material/InputBase";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAuthContext } from "../contexts/AuthContext";
 import { Avatar, Button } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useProductContext } from "../contexts/ProductContext";
+import LiveSearch from "./LiveSearch";
+import { useCartContext } from "../contexts/CartContext";
 
 const pages = [
   {
@@ -32,8 +32,15 @@ const pages = [
 
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();
+  const { setPage } = useProductContext();
+  const { cart, getCart } = useCartContext();
   const location = useLocation();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    getCart();
+  }, []);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -69,14 +76,17 @@ export default function Navbar() {
               variant="h6"
               noWrap
               component={Box}
-              onClick={() => navigate(-1)}
+              onClick={() => {
+                setPage(1);
+                navigate("/");
+              }}
               sx={{
                 display: { xs: "none", sm: "block" },
                 textDecoration: "none",
                 color: "inherit",
               }}
             >
-              MUI
+              OFOFO
             </Typography>
             <Box sx={{ display: "flex", ml: 2 }}>
               {pages.map((page) => (
@@ -91,29 +101,16 @@ export default function Navbar() {
               ))}
             </Box>
           </Box>
-          <Box sx={{ display: "flex", ml: 2, alignItems: "center" }}>
-            <SearchIcon />
-            <InputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-              sx={{
-                width: "400px",
-                marginRight: "100px",
-                color: "#DAFFFB",
-                backgroundColor: "#176B87",
-                borderRadius: "30px",
-                padding: "5px",
-              }}
-            />
-          </Box>
-
+          <LiveSearch />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
+              component={Link}
+              to="/cart"
             >
-              <Badge badgeContent={3} color="error">
+              <Badge badgeContent={cart.products.length} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
