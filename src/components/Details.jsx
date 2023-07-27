@@ -1,13 +1,47 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useProductContext } from "../contexts/ProductContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
+import { useCommentContexts } from "../contexts/CommentsContext";
 
 const Details = ({ item }) => {
-  const { isAdmin } = useAuthContext();
+  const { isAdmin, user } = useAuthContext();
   const { deleteProduct } = useProductContext();
+  const { comments, getComments, addComment } = useCommentContexts();
   const navigate = useNavigate();
+  const [userInfo, setUserInfo] = useState({});
+  const [commentVal, setCommentVal] = useState("");
+
+  const { id } = useParams();
+  console.log(id);
+
+  useEffect(() => {
+    setUserInfo(user);
+  }, [user]);
+
+  useEffect(() => {
+    getComments();
+  }, []);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!commentVal.trim()) {
+      return;
+    }
+    const newComment = {
+      productId: id,
+      comment: commentVal,
+      userEmail: userInfo.email,
+      userPhoto: userInfo.photo,
+    };
+    addComment(newComment);
+    console.log(newComment);
+    setCommentVal("");
+  }
+  function handleChange(e) {
+    setCommentVal(e.target.value);
+  }
 
   const dollars = item.price * 89;
   return (
@@ -21,7 +55,7 @@ const Details = ({ item }) => {
             <p>{dollars} kgs </p>
             <p>{item.price} $ </p>
           </div>
-          <div></div>
+          {user ? <div>{userInfo.email}</div> : <div></div>}
           {isAdmin() ? (
             <div className="buttonsholder">
               <button
@@ -61,31 +95,36 @@ const Details = ({ item }) => {
         </Typography>
       </div>
       <div className="comments">
-        <div className="comments_input">
-          <div className="comments_input_box">
-            <div className="comments_input_first">
-              <img width="80" src="" alt="" />
-              <p>krasavachic@gmail.com</p>
+        <form onSubmit={handleSubmit}>
+          <div className="comments_input">
+            <div className="comments_input_box">
+              <div className="comments_input_first">
+                <img width="80" src="" alt="" />
+                <h4>Оставьте свой отзыв</h4>
+              </div>
+              <div className="comments_input_second">
+                <textarea
+                  rows="5"
+                  cols="100"
+                  value={commentVal}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+              <button>Comment</button>
             </div>
-            <div className="comments_input_second">
-              <textarea rows="10" cols="50"></textarea>
+          </div>
+        </form>
+        {comments
+          .filter((item) => id === item.productId)
+          .map((item, index) => (
+            <div className="comments_comment" key={index}>
+              <div>
+                <img width="80" src="" alt="" />
+                <h3>{item.userEmail}</h3>
+              </div>
+              <p>{item.comment}</p>
             </div>
-            <button>Comment</button>
-          </div>
-        </div>
-        <div className="comments_comment">
-          <div>
-            <img width="80" src="" alt="" />
-            <h3>krasavachic@gmail.com</h3>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            libero aut repellendus quis corporis voluptatem aspernatur.
-            Reprehenderit explicabo assumenda voluptas, dolor repellendus
-            tenetur consequatur et laborum voluptatibus hic sint necessitatibus
-            facere consequuntur ut magnam nam sed neque aspernatur ex alias.
-          </p>
-        </div>
+          ))}
       </div>
     </div>
   );
