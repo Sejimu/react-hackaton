@@ -101,7 +101,8 @@ export default function Navbar() {
               ))}
             </Box>
           </Box>
-          <LiveSearch />
+          {location.pathname === "/" && <LiveSearch />}
+
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"

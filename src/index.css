@@ -67,7 +67,7 @@ footer {
   width: 35%;
   min-height: 90vh;
   /* border: 2px solid white; */
-  border-left: 10px solid white;
+  border-left: 2px solid white;
   border-radius: 15px;
   overflow: hidden;
   display: flex;

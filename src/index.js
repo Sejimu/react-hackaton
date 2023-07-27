@@ -8,7 +8,6 @@ import ProductContext from "./contexts/ProductContext";
 import AuthContext from "./contexts/AuthContext";
 import FavouriteContext from "./contexts/FavouriteContext";
 import CommentsContext from "./contexts/CommentsContext";
-=======
 import CartContext from "./contexts/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,10 +17,10 @@ root.render(
       <CartContext>
         <FavouriteContext>
           <ProductContext>
-             <CommentsContext>
-                <Toastify />
-                <App />
-             </CommentsContext>
+            <CommentsContext>
+              <Toastify />
+              <App />
+            </CommentsContext>
           </ProductContext>
         </FavouriteContext>
       </CartContext>

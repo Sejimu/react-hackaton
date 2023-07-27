@@ -10,6 +10,15 @@
       "selected": false
     },
     {
+      "id": 3,
+      "title": "dfghjhtrewq",
+      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
+      "description": "Описание товара 3",
+      "price": 599,
+      "category": "мода",
+      "selected": true
+    },
+    {
       "id": 4,
       "title": "Пример товара 4",
       "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
@@ -41,7 +50,7 @@
       "title": "Пример товара 7",
       "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
       "description": "Описание товара 7",
-      "price": 999,
+      "price": 1000,
       "category": "мебель",
       "selected": true
     },
@@ -872,8 +881,6 @@
       "price": 49.99,
       "category": "книги",
       "selected": false
-    },
-    
-
+    }
   ]
 }
