@@ -15,11 +15,13 @@ import { useProductContext } from "../contexts/ProductContext";
 import { useCartContext } from "../contexts/CartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import { useAuthContext } from "../contexts/AuthContext";
 
 export default function ProductItem({ item }) {
   const { deleteProduct } = useProductContext();
   const { addProductToCart, isAlreadyInCart, deleteProductFromCart } =
     useCartContext();
+  const { isAdmin, user } = useAuthContext();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -43,8 +45,9 @@ export default function ProductItem({ item }) {
       {
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton onClick={handleClick} aria-label="settings">
-            <MoreVertIcon />
+            {isAdmin() && <MoreVertIcon sx={{ color: "white" }} />}
           </IconButton>
+
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
@@ -103,18 +106,26 @@ export default function ProductItem({ item }) {
           justifyContent: "space-around",
         }}
       >
-        {isAlreadyInCart(item.id) ? (
-          <IconButton
-            onClick={() => deleteProductFromCart(item.id)}
-            aria-label="share"
-          >
-            <RemoveShoppingCartIcon color="error" />
-          </IconButton>
+        {user ? (
+          isAlreadyInCart(item.id) ? (
+            <IconButton
+              onClick={() => deleteProductFromCart(item.id)}
+              aria-label="share"
+            >
+              <RemoveShoppingCartIcon color="error" />
+            </IconButton>
+          ) : (
+            <IconButton
+              onClick={() => addProductToCart(item)}
+              aria-label="share"
+            >
+              <AddShoppingCartIcon color="primary" />
+            </IconButton>
+          )
         ) : (
-          <IconButton onClick={() => addProductToCart(item)} aria-label="share">
-            <AddShoppingCartIcon color="primary" />
-          </IconButton>
+          ""
         )}
+
         <Button size="small" sx={{ color: "#64CCC5" }}>
           Learn More
         </Button>

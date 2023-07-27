@@ -22,7 +22,7 @@
       "id": 4,
       "title": "Пример товара 4",
       "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "sdfghjkjhgfdsa",
+      "description": "Описание товара 4",
       "price": 49.99,
       "category": "книги",
       "selected": false

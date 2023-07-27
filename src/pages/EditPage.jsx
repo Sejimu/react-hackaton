@@ -54,7 +54,7 @@ export default function EditPage() {
 
     updateProduct(id, { ...formValue, price: +formValue.price });
 
-    navigate("/");
+    navigate(-1);
   };
 
   return (

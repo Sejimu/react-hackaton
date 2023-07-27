@@ -89,18 +89,20 @@ export default function Navbar() {
               OFOFO
             </Typography>
             <Box sx={{ display: "flex", ml: 2 }}>
-              {pages.map((page) => (
-                <Button
-                  component={NavLink}
-                  to={page.link}
-                  sx={{ my: 2, color: "#F0F0F0" }}
-                  key={page.title}
-                >
-                  {page.title}
-                </Button>
-              ))}
+              {isAdmin() &&
+                pages.map((page) => (
+                  <Button
+                    component={NavLink}
+                    to={page.link}
+                    sx={{ my: 2, color: "#F0F0F0" }}
+                    key={page.title}
+                  >
+                    {page.title}
+                  </Button>
+                ))}
             </Box>
           </Box>
+
           {location.pathname === "/" && <LiveSearch />}
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

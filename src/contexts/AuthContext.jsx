@@ -57,7 +57,6 @@ function AuthContext({ children }) {
     if (!user) {
       return false;
     }
-
     return ADMINS.includes(user.email);
   }
 
