@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { Box, Menu, MenuItem } from "@mui/material";
+import { Badge, Box, Menu, MenuItem } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import IconButton from "@mui/material/IconButton";
@@ -16,9 +16,13 @@ import { useCartContext } from "../contexts/CartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { useAuthContext } from "../contexts/AuthContext";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useEffect } from "react";
+import { useState } from "react";
 
-export default function ProductItem({ item }) {
-  const { deleteProduct } = useProductContext();
+export default function ProductItem({ item, likes }) {
+  const { deleteProduct, updateProduct } = useProductContext();
   const { addProductToCart, isAlreadyInCart, deleteProductFromCart } =
     useCartContext();
   const { isAdmin, user } = useAuthContext();
@@ -31,7 +35,32 @@ export default function ProductItem({ item }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+  function handleAddLike() {
+    likes.push(user.email);
+    const obj = {
+      ...item,
+      likes,
+    };
+    updateProduct(item.id, obj);
+  }
+
+  function handleRemoveLike() {
+    const emailIndex = likes.findIndex((item) => item === user.email);
+
+    if (emailIndex !== -1) {
+      likes.splice(emailIndex, 1);
+      const obj = {
+        ...item,
+        likes,
+      };
+      updateProduct(item.id, obj);
+    }
+  }
+
+  console.log(likes);
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   return (
     <Card
       sx={{
@@ -106,6 +135,26 @@ export default function ProductItem({ item }) {
           justifyContent: "space-around",
         }}
       >
+        {user ? (
+          likes.includes(user.email) ? (
+            <IconButton onClick={handleRemoveLike}>
+              <Badge badgeContent={likes.length} color="error">
+                <FavoriteIcon sx={{ color: "red" }} />
+              </Badge>
+            </IconButton>
+          ) : (
+            <>
+              <IconButton onClick={handleAddLike}>
+                <Badge badgeContent={likes.length} color="error">
+                  <FavoriteBorderIcon sx={{ color: "white" }} />
+                </Badge>
+              </IconButton>
+            </>
+          )
+        ) : (
+          ""
+        )}
+
         {user ? (
           isAlreadyInCart(item.id) ? (
             <IconButton

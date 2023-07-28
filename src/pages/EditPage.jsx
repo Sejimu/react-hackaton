@@ -52,7 +52,7 @@ export default function EditPage() {
       return;
     }
 
-    updateProduct(id, { ...formValue, price: +formValue.price });
+    updateProduct(id, { ...formValue, price: +formValue.price, likes: [] });
 
     navigate(-1);
   };
