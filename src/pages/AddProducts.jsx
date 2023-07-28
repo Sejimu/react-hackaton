@@ -42,7 +42,12 @@ export default function AddProducts() {
       return;
     }
 
-    addProduct({ ...formValue, price: +formValue.price, selected: false });
+    addProduct({
+      ...formValue,
+      price: +formValue.price,
+      selected: false,
+      likes: [],
+    });
 
     navigate("/");
   };
