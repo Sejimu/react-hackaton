@@ -14,6 +14,14 @@ function ProductsList() {
   //   window.location.reload();
   // }, [products]);
 
+  let arr = [];
+
+  console.log(arr);
+
+  arr.push(undefined);
+
+  console.log(arr.includes("ghj"));
+
   return (
     <Box sx={{ backgroundColor: "#001C30", height: "100%" }}>
       <Typography variant="h3" sx={{ mb: "40px", pt: "90px" }}>
@@ -28,7 +36,7 @@ function ProductsList() {
         }}
       >
         {products.map((item) => (
-          <ProductItem key={item.id} item={item} />
+          <ProductItem key={item.id} item={item} likes={item.likes} />
         ))}
       </Box>
     </Box>

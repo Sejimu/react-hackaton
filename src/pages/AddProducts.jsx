@@ -48,7 +48,7 @@ export default function AddProducts() {
       ...formValue,
       price: +formValue.price,
       selected: false,
-      email: user.email,
+      likes: [],
     });
 
     navigate("/");
