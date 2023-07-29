@@ -29,6 +29,7 @@ export default function ProductItem({ item, likes }) {
   const { addProductToCart, isAlreadyInCart, deleteProductFromCart } =
     useCartContext();
   const [userEmailId, setUserEmailId] = useState(null);
+  const [userka, setUserka] = useState(false);
   const { isAdmin, user } = useAuthContext();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -47,20 +48,30 @@ export default function ProductItem({ item, likes }) {
     getFavorite();
   }, []);
 
-  React.useEffect(() => {
-    if (typeof user !== "boolean") {
-      const email = user.email;
+  useEffect(() => {
+    if (user) {
+      // Check if the user object exists before proceeding
+      if (typeof user === "boolean" || "null") {
+        setUserka(false);
+      } else {
+        setUserka(user.email);
+      }
+    }
+  }, [user]);
+
+  useEffect(() => {
+    if (userka) {
+      const email = userka;
       const parts = email.split("@");
       const username = parts[0] + item.id;
       setUserEmailId(username);
     }
-    console.log("asdsa");
-  }, [user]);
+  }, [userka]);
 
   function objHolder() {
     const obj = {
       item: item,
-      email: user.email,
+      email: userka,
       itemId: item.id,
       id: userEmailId,
     };
@@ -68,7 +79,7 @@ export default function ProductItem({ item, likes }) {
   }
 
   function handleAddLike() {
-    likes.push(user.email);
+    likes.push(userka);
     const obj = {
       ...item,
       likes,
@@ -77,7 +88,7 @@ export default function ProductItem({ item, likes }) {
   }
 
   function handleRemoveLike() {
-    const emailIndex = likes.findIndex((item) => item === user.email);
+    const emailIndex = likes.findIndex((item) => item === userka);
 
     if (emailIndex !== -1) {
       likes.splice(emailIndex, 1);
@@ -165,8 +176,8 @@ export default function ProductItem({ item, likes }) {
           justifyContent: "space-around",
         }}
       >
-        {user ? (
-          likes.includes(user.email) ? (
+        {userka ? (
+          likes.includes(userka) ? (
             <IconButton onClick={handleRemoveLike}>
               <Badge badgeContent={likes.length} color="error">
                 <FavoriteIcon sx={{ color: "red" }} />
@@ -185,7 +196,7 @@ export default function ProductItem({ item, likes }) {
           ""
         )}
 
-        {user ? (
+        {userka ? (
           isAlreadyInCart(item.id) ? (
             <IconButton
               onClick={() => deleteProductFromCart(item.id)}
@@ -204,7 +215,7 @@ export default function ProductItem({ item, likes }) {
         ) : (
           ""
         )}
-        {user ? (
+        {userka ? (
           isAlreadyInFavorite(item.id) ? (
             <Button sx={{ display: "flex", alignItems: "center" }}>
               <BookmarkRemoveIcon
