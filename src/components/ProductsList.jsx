@@ -10,17 +10,6 @@ function ProductsList() {
       getProducts();
     }, 50);
   }, []);
-  // useEffect(() => {
-  //   window.location.reload();
-  // }, [products]);
-
-  let arr = [];
-
-  console.log(arr);
-
-  arr.push(undefined);
-
-  console.log(arr.includes("ghj"));
 
   return (
     <Box sx={{ backgroundColor: "#001C30", height: "100%" }}>

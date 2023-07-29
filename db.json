@@ -23,7 +23,8 @@
       "category": "мода",
       "selected": true,
       "likes": [
-        "admin1@gmail.com"
+        "admin1@gmail.com",
+        "krasavachic@gmail.com"
       ]
     },
     {
@@ -35,7 +36,8 @@
       "category": "книги",
       "selected": false,
       "likes": [
-        "admin1@gmail.com"
+        "admin1@gmail.com",
+        "krasavachic@gmail.com"
       ]
     },
     {
@@ -47,7 +49,8 @@
       "category": "спорт",
       "selected": true,
       "likes": [
-        "admin1@gmail.com"
+        "admin1@gmail.com",
+        "krasavachic@gmail.com"
       ]
     },
     {
@@ -1029,8 +1032,6 @@
       "id": 5
     }
   ],
-  
-  
   "comments": [
     {
       "productId": "12",
@@ -1134,20 +1135,6 @@
     },
     {
       "item": {
-        "id": 7,
-        "title": "Пример товара 7",
-        "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-        "description": "Описание товара 7",
-        "price": 1000,
-        "category": "мебель",
-        "selected": true
-      },
-      "email": "krasavachic@gmail.com",
-      "itemId": 7,
-      "id": "krasavachic7"
-    },
-    {
-      "item": {
         "id": 3,
         "title": "dfghjhtrewq",
         "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
@@ -1173,20 +1160,6 @@
       "email": "huysos228@gmail.com",
       "itemId": 4,
       "id": "huysos2284"
-    },
-    {
-      "item": {
-        "id": 5,
-        "title": "Пример товара 5",
-        "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-        "description": "Описание товара 5",
-        "price": 299.9,
-        "category": "спорт",
-        "selected": true
-      },
-      "email": "huysos228@gmail.com",
-      "itemId": 5,
-      "id": "huysos2285"
     },
     {
       "item": {
@@ -1244,5 +1217,5 @@
       "itemId": 5,
       "id": "pidor5"
     }
-  ],
+  ]
 }
