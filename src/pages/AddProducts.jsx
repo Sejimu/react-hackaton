@@ -9,10 +9,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useProductContext } from "../contexts/ProductContext";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const defaultTheme = createTheme();
 
 export default function AddProducts() {
+  const { user } = useAuthContext();
   const navigate = useNavigate();
   const { addProduct } = useProductContext();
   const [formValue, setFormValue] = useState({

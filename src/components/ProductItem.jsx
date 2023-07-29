@@ -16,6 +16,9 @@ import { useCartContext } from "../contexts/CartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { useAuthContext } from "../contexts/AuthContext";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useFavouriteContext } from "../contexts/FavouriteContext";
+import BookmarkRemoveIcon from "@mui/icons-material/BookmarkRemove";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useEffect } from "react";
@@ -25,10 +28,13 @@ export default function ProductItem({ item, likes }) {
   const { deleteProduct, updateProduct } = useProductContext();
   const { addProductToCart, isAlreadyInCart, deleteProductFromCart } =
     useCartContext();
+  const [userEmailId, setUserEmailId] = useState(null);
   const { isAdmin, user } = useAuthContext();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const { isAlreadyInFavorite, deleteFavorite, addFavorites, getFavorite } =
+    useFavouriteContext();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -36,6 +42,30 @@ export default function ProductItem({ item, likes }) {
     setAnchorEl(null);
   };
   // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  React.useEffect(() => {
+    getFavorite();
+  }, []);
+
+  React.useEffect(() => {
+    if (typeof user !== "boolean") {
+      const email = user.email;
+      const parts = email.split("@");
+      const username = parts[0] + item.id;
+      setUserEmailId(username);
+    }
+    console.log("asdsa");
+  }, [user]);
+
+  function objHolder() {
+    const obj = {
+      item: item,
+      email: user.email,
+      itemId: item.id,
+      id: userEmailId,
+    };
+    addFavorites(obj);
+  }
 
   function handleAddLike() {
     likes.push(user.email);
@@ -168,16 +198,35 @@ export default function ProductItem({ item, likes }) {
               onClick={() => addProductToCart(item)}
               aria-label="share"
             >
-              <AddShoppingCartIcon color="primary" />
+              <AddShoppingCartIcon sx={{ color: "#64CCC5" }} />
             </IconButton>
           )
         ) : (
           ""
         )}
-
-        <Button size="small" sx={{ color: "#64CCC5" }}>
-          Learn More
-        </Button>
+        {user ? (
+          isAlreadyInFavorite(item.id) ? (
+            <Button sx={{ display: "flex", alignItems: "center" }}>
+              <BookmarkRemoveIcon
+                onClick={() => {
+                  const a = window.confirm("Are you sure?");
+                  if (a) {
+                    deleteFavorite(userEmailId);
+                  }
+                }}
+              />
+            </Button>
+          ) : (
+            <Button
+              onClick={objHolder}
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              <BookmarkIcon sx={{ color: "#64CCC5" }} />
+            </Button>
+          )
+        ) : (
+          ""
+        )}
       </CardActions>
     </Card>
   );
