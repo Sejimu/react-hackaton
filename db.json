@@ -22,9 +22,7 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": [
-        "admin1@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"]
     },
     {
       "id": 4,
@@ -34,9 +32,7 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": [
-        "admin1@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"]
     },
     {
       "id": 5,
@@ -46,9 +42,7 @@
       "price": 299.9,
       "category": "спорт",
       "selected": true,
-      "likes": [
-        "admin1@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"]
     },
     {
       "id": 6,
@@ -58,9 +52,7 @@
       "price": 79,
       "category": "техника",
       "selected": false,
-      "likes": [
-        "admin1@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"]
     },
     {
       "id": 7,
@@ -70,10 +62,7 @@
       "price": 1000,
       "category": "мебель",
       "selected": true,
-      "likes": [
-        "admin1@gmail.com",
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com", "krasavachic@gmail.com"]
     },
     {
       "id": 9,
@@ -83,9 +72,7 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": [
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["krasavachic@gmail.com"]
     },
     {
       "id": 10,
@@ -95,9 +82,7 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": [
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["krasavachic@gmail.com"]
     },
     {
       "id": 11,
@@ -107,9 +92,7 @@
       "price": 1,
       "category": "электроника",
       "selected": true,
-      "likes": [
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["krasavachic@gmail.com"]
     },
     {
       "id": 12,
@@ -1059,5 +1042,5 @@
       "id": 7
     }
   ],
-  "favorite": []
+  "favorite": [{}]
 }
