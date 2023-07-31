@@ -55,17 +55,33 @@ const Details = ({ item }) => {
 
   const dollars = item.price * 89;
   return (
-    <div className="details" style={{ backgroundColor: "#001c30" }}>
+    <div className="details" style={{ backgroundColor: "#D8D9DA" }}>
       <div className="first_block">
         <div className="first_block_item_first">
           <img src={item.photo} alt="" />
         </div>
         <div className="first_block_item_second">
-          <div className="first_block_item_second_div">
+          <div
+            style={{ color: "#61677A" }}
+            className="first_block_item_second_div"
+          >
             <p>{dollars} kgs </p>
             <p>{item.price} $ </p>
           </div>
-          {userka ? <div>{item.user}</div> : <div></div>}
+
+          <div>
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p>{item.user}</p>
+            </div>
+          </div>
           {userka ? (
             item.user === userka || isAdmin() ? (
               <div className="buttonsholder">
@@ -98,64 +114,65 @@ const Details = ({ item }) => {
       </div>
 
       <div className="second_block" style={{ padding: "20px" }}>
-        <Typography sx={{ color: "black" }} variant="h4">
+        <Typography sx={{ color: "white" }} variant="h4">
           {item.title}
         </Typography>
-        <Typography variant="h6" sx={{ color: "black" }}>
+        <Typography variant="h6" sx={{ color: "white" }}>
           {item.description}
         </Typography>
-        <Typography variant="h5" sx={{ color: "black" }}>
+        <Typography variant="h5" sx={{ color: "white" }}>
           Category: {item.category}
         </Typography>
       </div>
-      {userka ? (
-        <div className="comments">
-          <form onSubmit={handleSubmit}>
-            <div className="comments_input">
-              <div className="comments_input_first">
-                <img width="80" src="" alt="" />
-                <h4>Оставьте свой отзыв</h4>
-              </div>
-              <div className="comments_input_second">
-                <div className="form">
-                  <input
-                    className="input"
-                    placeholder="Type your text"
-                    required
-                    type="text"
-                    value={commentVal}
-                    onChange={handleChange}
-                  />
-                  <span className="input-border"></span>
-                </div>
-              </div>
-              <button>Comment</button>
-            </div>
+      {userka && (
+        <div className="app-container">
+          <form className="message_form" onSubmit={handleSubmit}>
+            <textarea
+              className="message_input"
+              value={commentVal}
+              onChange={handleChange}
+              placeholder="Type your Comment"
+              required
+            />
+            <button type="submit" className="send_button">
+              Отправить
+            </button>
           </form>
 
           {comments
-            .filter((item) => id === item.productId)
-            .map((item, index) => (
-              <div className="comments_comment" key={index}>
-                <div>
-                  <img width="80" src="" alt="" />
-                  <h3>{item.userEmail}</h3>
+            .filter((commentItem) => id === commentItem.productId)
+            .map((commentItem, index) => (
+              <div
+                key={index}
+                className="user_info"
+                style={{
+                  marginTop: "30px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderTop: "2px solid white",
+                }}
+              >
+                <img
+                  src={commentItem.userPhoto} // Add user photo here
+                  alt="Аватар пользователя"
+                  className="avatar"
+                  style={{ marginBottom: "30px" }}
+                />
+                <div
+                  className="user_details"
+                  style={{
+                    display: "flex",
+                    flexFlow: "column",
+                    justifyContent: "center",
+                    textAlign: "left",
+                    color: "white",
+                  }}
+                >
+                  <span className="user_name">{commentItem.userEmail}</span>
+                  <p style={{ fontSize: "13px" }}>{commentItem.comment}</p>
+                  <span className="timestamp">123132</span>
                 </div>
-                <p>{item.comment}</p>
-              </div>
-            ))}
-        </div>
-      ) : (
-        <div>
-          {comments
-            .filter((item) => id === item.productId)
-            .map((item, index) => (
-              <div className="comments_comment" key={index}>
-                <div>
-                  <img width="80" src="" alt="" />
-                  <h3>{item.userEmail}</h3>
-                </div>
-                <p>{item.comment}</p>
               </div>
             ))}
         </div>

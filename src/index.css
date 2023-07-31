@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #dafffb;
+  color: #272829;
   backgroundcolor: #001c30;
 }
 * {
@@ -48,7 +48,7 @@ footer {
 .first_block_item_first {
   width: 60%;
   height: 90vh;
-  background-color: #dafffb;
+  background-color: #272829;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,37 +66,43 @@ footer {
   margin-left: 40px;
   width: 35%;
   min-height: 90vh;
-  /* border: 2px solid white; */
-  border-left: 2px solid white;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   flex-flow: column;
+  background-color: #272829;
   justify-content: space-between;
 }
 
 .first_block_item_second div:nth-child(1) {
   width: 100%;
   height: 20vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+.first_block_item_second div:nth-child(1) p {
   color: rgb(255, 255, 255);
 }
 .first_block_item_second div:nth-child(2) {
   width: 100%;
   height: 35vh;
-  border-top: 2px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
 }
 .first_block_item_second div:nth-child(3) {
   width: 100%;
   height: 35vh;
 
-  border-top: 2px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
 }
 
 .second_block {
   width: 100%;
   margin-top: 30px;
   min-height: 30vh;
-  background-color: #dafffb;
+  background-color: #272829;
   border-radius: 15px;
   text-align: left;
   display: flex;
@@ -104,6 +110,7 @@ footer {
   justify-content: center;
 }
 .first_block_item_second_div {
+  color: white !important;
   text-align: left;
   padding: 20px;
   display: flex;
@@ -113,47 +120,44 @@ footer {
   flex-flow: column;
   align-items: flex-start;
 }
-.comments {
-  width: 75vw;
+.app-container {
+  background-color: #272829;
+
   margin: 0 auto;
+  width: 75vw;
   margin-top: 20px;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+  overflow: hidden;
+  padding: 20px;
+}
+.message_form {
+  height: 150px;
   display: flex;
   flex-flow: column;
   align-items: center;
-  border: 2px solid black;
+  justify-content: center;
+  gap: 10px;
 }
-.comments_input {
-  border: 2px solid black;
-  width: 100%;
-}
-.comments_input_box {
-  margin: 0 auto;
-  border: 2px red solid;
-  width: 60%;
-}
-.comments_input_first {
-  display: flex;
-  align-items: center;
-}
-.comments_input_first p {
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 22px;
-}
-.comments_input button {
-  width: 200px;
-  height: 35px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  border-radius: 6px;
+.message_form textarea {
+  min-width: 250px;
+  width: 50%;
+  height: 150px;
   border: none;
-}
-.comments_input_second textarea {
-  width: 60%;
-  font-size: 20px;
+  background-color: #fff6e0;
+  border-radius: 6px;
 }
 
+.send_button {
+  min-width: 250px;
+  height: 40px;
+  width: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  background-color: transparent;
+}
 /* todo kube start */
 .cube-container {
   width: 200px;
@@ -240,29 +244,25 @@ footer {
 }
 
 .DeleteDetails {
-  background-color: #64ccc5;
-
+  background-color: transparent;
   border-radius: 6px;
-  border: none;
+  border: 2px solid white;
   color: white;
   height: 35px;
   width: 150px;
+  cursor: pointer;
 }
 .EditDetails {
-  background-color: #176b87;
+  background-color: #61677a;
   border-radius: 6px;
   margin-top: 5px;
   border: none;
   color: white;
   height: 35px;
   width: 150px;
+  cursor: pointer;
 }
-.DeleteDetails:hover {
-  border: 2px solid white;
-}
-.EditDetails:hover {
-  border: 2px solid white;
-}
+
 .cart_button:hover {
   background-color: #7a8197 !important;
 }
@@ -294,8 +294,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0px;
     overflow: hidden;
+  }
+  .app-container {
+    margin-top: 20px;
+    width: 75vw;
   }
   .first_block_item_first img {
     max-width: 60%;
@@ -318,6 +321,15 @@ footer {
     margin-top: 20px;
     min-height: 30vh;
   }
+  .second_block h4 {
+    font-size: 20px !important;
+  }
+  .second_block h6 {
+    font-size: 16px !important;
+  }
+  .second_block h5 {
+    font-size: 17px !important;
+  }
   .comments {
     width: 95vw;
   }
@@ -325,6 +337,9 @@ footer {
     font-size: 20px !important;
     font-weight: 600 !important;
   }
+}
+.bgImage {
+  backdrop-filter: blur(10px);
 }
 
 /* !==========================================500======================================== */
@@ -335,10 +350,13 @@ footer {
     max-height: 100%;
     height: 100%;
   }
-
+  .app-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 85vw;
+  }
   .first_block_item_second {
     width: 90%;
-
     border-radius: 15px;
   }
   .second_block {

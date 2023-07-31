@@ -56,7 +56,11 @@ export default function AuthPage() {
       <Container
         component="main"
         maxWidth="xs"
-        sx={{ minHeight: "100vh", paddingTop: "30px" }}
+        sx={{
+          minHeight: "100vh",
+          paddingTop: "30px",
+          backgroundColor: "#D8D9DA", // Background color for the container
+        }}
       >
         <CssBaseline />
         <Box
@@ -67,11 +71,11 @@ export default function AuthPage() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar>
-
-          <Typography component="h1" variant="h5" sx={{ color: "#DAFFFB" }}>
+          <Typography
+            component="h1"
+            variant="h5"
+            sx={{ color: "black", mb: 2 }} // Set margin bottom to create space between heading and form
+          >
             {isLogin ? "Sign in" : "Sign up"}
           </Typography>
           <Box
@@ -90,7 +94,7 @@ export default function AuthPage() {
                   label="Full name"
                   name="displayName"
                   autoFocus
-                  sx={{ backgroundColor: "#64CCC5" }}
+                  sx={{ backgroundColor: "#272829", color: "white" }}
                 />
                 <TextField
                   margin="normal"
@@ -99,7 +103,7 @@ export default function AuthPage() {
                   id="image"
                   label="Photo"
                   name="photoURL"
-                  sx={{ backgroundColor: "#64CCC5" }}
+                  sx={{ backgroundColor: "#272829", color: "white" }}
                 />
                 <TextField
                   margin="normal"
@@ -108,7 +112,7 @@ export default function AuthPage() {
                   id="phone"
                   label="phone"
                   name="phone"
-                  sx={{ backgroundColor: "#64CCC5" }}
+                  sx={{ backgroundColor: "#272829", color: "white" }}
                 />
               </>
             )}
@@ -122,7 +126,13 @@ export default function AuthPage() {
               name="email"
               autoComplete="email"
               autoFocus
-              sx={{ backgroundColor: "#64CCC5" }}
+              sx={{
+                backgroundColor: "#272829", // Background color for input field
+                color: "white", // Text color
+                "&::placeholder": {
+                  color: "white", // Placeholder text color
+                },
+              }}
             />
             <TextField
               margin="normal"
@@ -133,7 +143,13 @@ export default function AuthPage() {
               type="password"
               id="password"
               autoComplete="current-password"
-              sx={{ backgroundColor: "#64CCC5" }}
+              sx={{
+                backgroundColor: "#272829", // Background color for input field
+                color: "white", // Text color
+                "&::placeholder": {
+                  color: "white", // Placeholder text color
+                },
+              }}
             />
 
             <Button
@@ -143,8 +159,8 @@ export default function AuthPage() {
               sx={{
                 mt: 3,
                 mb: 2,
-                backgroundColor: "#DAFFFB",
-                color: "#001C30",
+                backgroundColor: "#DAFFFB", // Background color for the button
+                color: "black", // Text color for the button
               }}
             >
               {isLogin ? "Sign In" : "Sign Up"}
@@ -156,6 +172,7 @@ export default function AuthPage() {
                   onClick={() => setIsLogin((prev) => !prev)}
                   href="#"
                   variant="body2"
+                  sx={{ color: "black" }} // Text color for the link
                 >
                   {isLogin
                     ? "Don't have an account? Sign Up"

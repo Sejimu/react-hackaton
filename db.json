@@ -44,7 +44,10 @@
       "price": 299.9,
       "category": "спорт",
       "selected": true,
-      "likes": [],
+      "likes": [
+        "user1@gmail.com",
+        "krasavachic@gmail.com"
+      ],
       "hovered": true,
       "user": "user1@gmail.com"
     },
@@ -104,7 +107,9 @@
       "price": 1,
       "category": "электроника",
       "selected": true,
-      "likes": [],
+      "likes": [
+        "user1@gmail.com"
+      ],
       "hovered": true,
       "user": "user2@gmail.com"
     },
@@ -116,7 +121,9 @@
       "price": 999.5,
       "category": "красота",
       "selected": false,
-      "likes": [],
+      "likes": [
+        "user1@gmail.com"
+      ],
       "hovered": true,
       "user": "user1@gmail.com"
     },
@@ -128,7 +135,9 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": [],
+      "likes": [
+        "user1@gmail.com"
+      ],
       "hovered": true,
       "user": "user2@gmail.com"
     },
@@ -140,7 +149,9 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": [],
+      "likes": [
+        "user1@gmail.com"
+      ],
       "hovered": true,
       "user": "user2@gmail.com"
     },
@@ -231,10 +242,114 @@
       "photoURL": "https://yandex.ru/images/search?text=picture+user&img_url=https%3A%2F%2Fyt3.ggpht.com%2Fytc%2FAKedOLSC0TiBq4ORCeVd__4VAK7Q_rIxXinNXhj_k_68Ljs%3Ds900-c-k-c0x00ffffff-no-rj&pos=5&rpt=simage&stype=image&lr=10309&parent-reqid=1690780706119279-6151150964058339298-balancer-l7leveler-kubr-yp-vla-106-BAL-9810&source=serp",
       "phone": "+996333666777",
       "id": 3
+    },
+    {
+      "email": "krasavachic@gmail.com",
+      "name": "asylbek",
+      "photoURL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIwAuwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwUGB//EADwQAAEDAgQEAwYDBwMFAAAAAAEAAgMEEQUSITETQVFhBnGBFCIyQpGhByPBM0NSYrHR8RZy8BUlVLLh/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAECAwQFBv/EACgRAAICAgICAQQBBQAAAAAAAAABAhEDEgQTITFBBSIyUWEUQlJx8P/aAAwDAQACEQMRAD8AgYuoUeHZGucTyVZbfkukmzyzigXInyIjhpcNOyOoNw0siJ4aXDRYtQbIU3DRQZ2T5EbC6wQRKQjRORPlsixdYMIhZPwegQRxqF1U+mgie+VjyzbS43R9S72GBkmIuLXSacMaZQeZG9lRPlwg9fk6GH6TmzRcqpETFZLhIhjQBcS59L6ixsphivhkUlaMGbjvHLWQKIQnETeiKyJcNS2KdEDiMBLhojIpBiLE4g3DTcFFZU+TsnsReNMG4SXDCKyHonEZ6I2I9YKI0/B7lFiPspZOxT2E8aKciXDRGRLJ2Wc6tA/DS4aIydksvZFhQMWJZETk7Jwwc07FQNkTZCjBG3kHFOYHHaN30SsNGB5ExZYXsjm0k7v3ZU/YJjpa10OSRKOKTfoz4PARlpmzy4pOydx4n5bRz115k/ZcpjdTJxJYauWKWZr7MkuXkAaWIN7fZeoUdLXSytdPXEubG0SxNtYOA3A5et+y5DxZhIrfEVLkjYQYyyS5tnOpAO3YLzSy3ldnvIYqx6xPPKbFKqOSnigcG",
+      "phone": "1234567",
+      "id": 4
     }
   ],
   "comments": [
+    {
+      "productId": "3",
+      "comment": "sdcsncjwncjnsnasijcnjaskj",
+      "userEmail": "user1@gmail.com",
+      "id": 1
+    },
+    {
+      "productId": "3",
+      "comment": "dsadsadasasdsaddas",
+      "userEmail": "krasavachic@gmail.com",
+      "id": 2
+    }
   ],
-  "favorite": []
+  "favorite": [
+    {
+      "item": {
+        "id": 2,
+        "title": "Пример товара 2",
+        "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
+        "description": "Описание товара 2",
+        "price": 999.5,
+        "category": "красота",
+        "selected": false,
+        "likes": [],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "user1@gmail.com",
+      "itemId": 2,
+      "id": "user12"
+    },
+    {
+      "item": {
+        "id": 4,
+        "title": "qwertyuiolра 4",
+        "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
+        "description": "asdfghjk",
+        "price": 49.99,
+        "category": "книги",
+        "selected": false,
+        "likes": [],
+        "hovered": true,
+        "user": "user2@gmail.com"
+      },
+      "email": "user1@gmail.com",
+      "itemId": 4,
+      "id": "user14"
+    },
+    {
+      "item": {
+        "id": 4,
+        "title": "qwertyuiolра 4",
+        "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
+        "description": "asdfghjk",
+        "price": 49.99,
+        "category": "книги",
+        "selected": false,
+        "likes": [],
+        "hovered": true,
+        "user": "user2@gmail.com"
+      },
+      "email": "user2@gmail.com",
+      "itemId": 4,
+      "id": "user24"
+    },
+    {
+      "item": {
+        "id": 5,
+        "title": "Пример товара 5",
+        "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
+        "description": "Описание товара 5",
+        "price": 299.9,
+        "category": "спорт",
+        "selected": true,
+        "likes": [],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "user2@gmail.com",
+      "itemId": 5,
+      "id": "user25"
+    },
+    {
+      "item": {
+        "id": 2,
+        "title": "Пример товара 2",
+        "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
+        "description": "Описание товара 2",
+        "price": 999.5,
+        "category": "красота",
+        "selected": false,
+        "likes": [],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "user2@gmail.com",
+      "itemId": 2,
+      "id": "user22"
+    }
+  ]
 }
-

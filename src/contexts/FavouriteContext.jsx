@@ -60,7 +60,7 @@ function FavouriteContext({ children }) {
   const value = {
     getFavorite,
     addFavorites,
-
+    favorit,
     isAlreadyInFavorite,
     deleteFavorite,
   };
