@@ -86,7 +86,8 @@ function CartPage() {
           minHeight: "100vh",
           backgroundColor: "#D8D9DA ",
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "space-evenly",
+          gap: "30px",
           flexFlow: "wrap",
         }}
       >
@@ -96,7 +97,7 @@ function CartPage() {
             style={{
               marginTop: "30px",
               marginBottom: "30px",
-              minWidth: "280px",
+              width: "280px",
               height: "400px",
               border: "5px solid #272829",
               borderRadius: "15px",
@@ -122,7 +123,7 @@ function CartPage() {
               }}
             ></div>
 
-            <h2 style={{ color: "#FFF6E0" }}>{item.title}</h2>
+            <h2 style={{ color: "#FFF6E0" }}>{item.title.slice(0, 18)}...</h2>
             <div style={{ color: "#FFF6E0" }}>
               <p>{item.category}</p>
               <p>{item.price} $</p>

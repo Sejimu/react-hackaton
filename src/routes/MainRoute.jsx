@@ -21,10 +21,13 @@ function MainRoute() {
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route element={<UserProtectedRoute />}>
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/add" element={<AddProducts />} />
           <Route path="/cart" element={<CartPage />} />
+
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/fav" element={<FavoritesPage />} />
+
           <Route path="/edit/:id" element={<EditPage />} />
         </Route>
       </Route>

@@ -184,7 +184,7 @@ export default function ProductItem({ item, likes }) {
           {item.category}
         </Typography>
         <Typography variant="h6" color="text.dark" sx={{ color: "#FFF6E0" }}>
-          {item.description.slice(0, 25)}...
+          {item.description.slice(0, 19)}...
         </Typography>
       </CardContent>
       <CardActions

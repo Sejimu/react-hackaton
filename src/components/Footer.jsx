@@ -3,6 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
+      className="footer"
       style={{
         backgroundColor: "black",
         minHeight: "60px",
