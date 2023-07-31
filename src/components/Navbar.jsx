@@ -71,8 +71,14 @@ export default function Navbar() {
           top: "0",
         }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: "30px" }}>
+        <Toolbar
+          className="nav-item-middle"
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <Box
+            className="nav-item-left"
+            sx={{ display: "flex", alignItems: "center", gap: "30px" }}
+          >
             <IconButton
               size="large"
               edge="start"
@@ -117,9 +123,14 @@ export default function Navbar() {
               })}
           </Box>
 
-          {location.pathname === "/" && <LiveSearch />}
+          {location.pathname === "/" && (
+            <LiveSearch className="nav-item-middle-search" />
+          )}
 
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{ display: { xs: "none", md: "flex" } }}
+            className="nav-item-right"
+          >
             {userka ? (
               <>
                 <IconButton
@@ -215,7 +226,12 @@ export default function Navbar() {
             )}
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton size="large" aria-label="show more" color="inherit">
+            <IconButton
+              className="nav-item-right"
+              size="large"
+              aria-label="show more"
+              color="inherit"
+            >
               <MoreIcon />
             </IconButton>
           </Box>
