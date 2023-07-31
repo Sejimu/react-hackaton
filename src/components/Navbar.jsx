@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Link,
   NavLink,
@@ -21,6 +21,7 @@ import { useProductContext } from "../contexts/ProductContext";
 import LiveSearch from "./LiveSearch";
 import { useCartContext } from "../contexts/CartContext";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
+import { Image } from "@mui/icons-material";
 
 const pages = [
   {
@@ -36,6 +37,7 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [userka, setUserka] = useState(false);
 
   useEffect(() => {
     getCart();
@@ -50,6 +52,16 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
+  useEffect(() => {
+    if (user) {
+      if (typeof user === "boolean") {
+        setUserka(false);
+      } else {
+        setUserka({ displayName: user.displayName });
+      }
+    }
+  }, [user]);
+
   return (
     <Box sx={{ display: { md: "flex" } }}>
       <AppBar
@@ -60,13 +72,13 @@ export default function Navbar() {
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: "30px" }}>
             <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="open drawer"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2, display: "none" }}
             >
               <MenuIcon />
             </IconButton>
@@ -74,7 +86,11 @@ export default function Navbar() {
               variant="h6"
               noWrap
               component={Box}
-              onClick={() => {
+              onClick={(e) => {
+                if (location.pathname === "/") {
+                  return;
+                }
+
                 setPage(1);
                 navigate("/");
               }}
@@ -86,12 +102,25 @@ export default function Navbar() {
             >
               OFOFO
             </Typography>
+            {userka &&
+              pages.map((page, index) => {
+                return (
+                  <Typography
+                    key={index}
+                    component={Link}
+                    to={page.link}
+                    sx={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    {page.title}
+                  </Typography>
+                );
+              })}
           </Box>
 
           {location.pathname === "/" && <LiveSearch />}
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {user ? (
+            {userka ? (
               <>
                 <IconButton
                   size="large"
@@ -139,13 +168,15 @@ export default function Navbar() {
                 >
                   <Avatar
                     sx={{ textTransform: "uppercase" }}
-                    src={user.photoURL}
-                    alt={user.displayName}
+                    src={
+                      "https://yandex.ru/images/search?text=picture+user&img_url=https%3A%2F%2Fsun9-74.userapi.com%2Fimpf%2Fc830108%2Fv830108411%2F10cf1%2FTfWCNQvXD04.jpg%3Fsize%3D512x512%26quality%3D96%26sign%3Db17a70bc75e40ad08e90e5a3c0816c5e%26c_uniq_tag%3D_vx77grxmzxm7F5cI68HiAfL3ENBT1312YqVCWsy62o%26type%3Dalbum&pos=0&rpt=simage&stype=image&lr=10309&parent-reqid=1690780706119279-6151150964058339298-balancer-l7leveler-kubr-yp-vla-106-BAL-9810&source=serp"
+                    }
+                    alt={userka.displayName}
                   >
-                    {user.displayName && user.displayName.split(" ")[0][0]}
-                    {user.displayName &&
-                      user.displayName.includes(" ") &&
-                      user.displayName.split(" ")[1][0]}
+                    {userka.displayName && userka.displayName.split(" ")[0][0]}
+                    {userka.displayName &&
+                      userka.displayName.includes(" ") &&
+                      userka.displayName.split(" ")[1][0]}
                   </Avatar>
                 </IconButton>
                 <Menu
@@ -163,6 +194,14 @@ export default function Navbar() {
                     horizontal: "right",
                   }}
                 >
+                  <MenuItem
+                    onClick={() => {
+                      handleClose();
+                      navigate("/profile");
+                    }}
+                  >
+                    Profile
+                  </MenuItem>
                   <MenuItem
                     onClick={() => {
                       handleClose();

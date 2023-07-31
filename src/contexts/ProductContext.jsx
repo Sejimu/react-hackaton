@@ -43,15 +43,16 @@ function ProductContext({ children }) {
   const [state, dispatch] = useReducer(reducer, init);
   const [page, setPage] = useState(+searchParams.get("_page") || 1);
   const [details, setDetails] = useState(null);
-
+  const [prodact, setProdact] = useState([]);
   const currentParams = Object.fromEntries([...searchParams]);
+
   async function getProducts() {
     try {
       const { data, headers } = await axios.get(
         `${API}${window.location.search}  `
       );
       const totalCount = Math.ceil(headers["x-total-count"] / LIMIT);
-      // console.log(window.location.search);
+      console.log(data);
 
       dispatch({
         type: ACTIONS.pageTotalCount,
@@ -62,6 +63,15 @@ function ProductContext({ children }) {
         type: ACTIONS.products,
         payload: data,
       });
+    } catch (e) {
+      notify(`${e.response.status}: ${e.response.statusText}`, "error");
+    }
+  }
+
+  async function getProdact() {
+    try {
+      const { data } = await axios.get(API);
+      setProdact(data);
     } catch (e) {
       notify(`${e.response.status}: ${e.response.statusText}`, "error");
     }
@@ -88,6 +98,7 @@ function ProductContext({ children }) {
     try {
       await axios.delete(`${API}/${id}`);
       getProducts();
+      getProdact();
       notify("Successfully deleted");
     } catch (e) {
       notify(`${e.response.status}: ${e.response.statusText}`, "error");
@@ -99,6 +110,7 @@ function ProductContext({ children }) {
     try {
       await axios.patch(`${API}/${id}`, newData);
       getProducts();
+      getProdact();
     } catch (e) {
       notify(`${e.response.status}: ${e.response.statusText}`, "error");
     }
@@ -124,6 +136,8 @@ function ProductContext({ children }) {
     page,
     pageTotalCount: state.pageTotalCount,
     currentParams,
+    prodact,
+    getProdact,
   };
 
   return (
