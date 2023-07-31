@@ -19,16 +19,17 @@ import {
 
 function ProfilePage() {
   const { user } = useAuthContext();
-  const { deleteProduct, updateProduct, prodact, getProdact } =
-    useProductContext();
+  const { deleteProduct, prodact, getProdact } = useProductContext();
   const navigate = useNavigate();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [filtred, setFiltred] = React.useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [filtred, setFiltred] = useState([]);
+
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -49,7 +50,7 @@ function ProfilePage() {
   return (
     <div style={{ margin: "90px auto" }}>
       <div style={{ color: "black" }}>
-        <img src={user.photoURL} />
+        <img src={user.photoURL} alt="user" />
         <p>{user.email}</p>
         <p>{user.displayName}</p>
         <p>{user.phone}</p>
@@ -62,7 +63,7 @@ function ProfilePage() {
           justifyContent: "center",
         }}
       >
-        {filtred ? (
+        {filtred.length > 0 ? (
           filtred.map((item) => (
             <Card
               key={item.id}
@@ -150,14 +151,16 @@ function ProfilePage() {
             </Card>
           ))
         ) : (
-          <div className="loader">
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <p>There is no your products</p>
+            <Button>Add New Product</Button>
           </div>
         )}
       </div>
