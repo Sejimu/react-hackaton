@@ -56,7 +56,7 @@ export default function AuthPage() {
       <Container
         component="main"
         maxWidth="xs"
-        sx={{ height: "100vh", paddingTop: "30px" }}
+        sx={{ minHeight: "100vh", paddingTop: "30px" }}
       >
         <CssBaseline />
         <Box
@@ -110,7 +110,6 @@ export default function AuthPage() {
                   name="phone"
                   sx={{ backgroundColor: "#64CCC5" }}
                 />
-                phone
               </>
             )}
 

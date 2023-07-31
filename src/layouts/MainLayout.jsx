@@ -5,20 +5,20 @@ import Footer from "../components/Footer";
 
 function MainLayout() {
   return (
-    <div>
+    <>
       <Navbar />
       <div
         style={{
-          height: "100vh",
+          minHeight: "100vh",
           display: "flex",
           flexFlow: "column",
+          backgroundColor: "#D8D9DA",
           justifyContent: "space-between",
         }}
       >
         <Outlet />
-        {/* <Footer /> */}
       </div>
-    </div>
+    </>
   );
 }
 

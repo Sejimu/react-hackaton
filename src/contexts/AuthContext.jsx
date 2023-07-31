@@ -20,6 +20,7 @@ export function useAuthContext() {
 
 function AuthContext({ children }) {
   const [user, setUser] = useState(true);
+  const [assasads, setasdasdas] = useState(null);
 
   async function register(email, password, displayName, photoURL) {
     try {
@@ -50,6 +51,9 @@ function AuthContext({ children }) {
     onAuthStateChanged(auth, (user) => {
       setUser(user);
       console.log(user);
+      if (user === "null") {
+        setasdasdas("SSAsa");
+      }
     });
   }, []);
 

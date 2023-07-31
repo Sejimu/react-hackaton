@@ -50,10 +50,11 @@ export default function ProductItem({ item, likes }) {
 
   useEffect(() => {
     if (user) {
-      // Check if the user object exists before proceeding
-      if (typeof user === "boolean" || "null") {
+      if (typeof user === "boolean") {
+        console.log("huinia");
         setUserka(false);
       } else {
+        console.log("works");
         setUserka(user.email);
       }
     }
@@ -100,7 +101,6 @@ export default function ProductItem({ item, likes }) {
     }
   }
 
-  console.log(likes);
   // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   return (
     <Card
@@ -108,14 +108,16 @@ export default function ProductItem({ item, likes }) {
         maxWidth: 345,
         width: "270px",
         height: "380px",
-        backgroundColor: "#176B87",
+        backgroundColor: "#272829",
         color: "#dafffb",
+        borderRadius: "15px",
+        overflow: "hidden",
       }}
     >
-      {
+      {isAdmin() ? (
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton onClick={handleClick} aria-label="settings">
-            {isAdmin() && <MoreVertIcon sx={{ color: "white" }} />}
+            {isAdmin() && <MoreVertIcon sx={{ color: "#FFF6E0" }} />}
           </IconButton>
 
           <Menu
@@ -150,7 +152,9 @@ export default function ProductItem({ item, likes }) {
             </MenuItem>
           </Menu>
         </Box>
-      }
+      ) : (
+        ""
+      )}
       <CardMedia
         sx={{ height: 140 }}
         onClick={() => navigate(`/details/${item.id}`)}
@@ -159,13 +163,22 @@ export default function ProductItem({ item, likes }) {
       />
 
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ color: "#FFF6E0" }}
+        >
           {item.price}$
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ color: "#FFF6E0" }}
+        >
           {item.category}
         </Typography>
-        <Typography variant="h6" color="text.dark">
+        <Typography variant="h6" color="text.dark" sx={{ color: "#FFF6E0" }}>
           {item.description.slice(0, 25)}...
         </Typography>
       </CardContent>
@@ -176,18 +189,18 @@ export default function ProductItem({ item, likes }) {
           justifyContent: "space-around",
         }}
       >
-        {userka ? (
+        {userka && user ? (
           likes.includes(userka) ? (
             <IconButton onClick={handleRemoveLike}>
               <Badge badgeContent={likes.length} color="error">
-                <FavoriteIcon sx={{ color: "red" }} />
+                <FavoriteIcon sx={{ color: "#FFF6E0" }} />
               </Badge>
             </IconButton>
           ) : (
             <>
               <IconButton onClick={handleAddLike}>
                 <Badge badgeContent={likes.length} color="error">
-                  <FavoriteBorderIcon sx={{ color: "white" }} />
+                  <FavoriteBorderIcon sx={{ color: "#FFF6E0" }} />
                 </Badge>
               </IconButton>
             </>
@@ -196,29 +209,30 @@ export default function ProductItem({ item, likes }) {
           ""
         )}
 
-        {userka ? (
+        {userka && user ? (
           isAlreadyInCart(item.id) ? (
             <IconButton
               onClick={() => deleteProductFromCart(item.id)}
               aria-label="share"
             >
-              <RemoveShoppingCartIcon color="error" />
+              <RemoveShoppingCartIcon sx={{ color: "#D8D9DA" }} />
             </IconButton>
           ) : (
             <IconButton
               onClick={() => addProductToCart(item)}
               aria-label="share"
             >
-              <AddShoppingCartIcon sx={{ color: "#64CCC5" }} />
+              <AddShoppingCartIcon sx={{ color: "#FFF6E0" }} />
             </IconButton>
           )
         ) : (
           ""
         )}
-        {userka ? (
+        {userka && user ? (
           isAlreadyInFavorite(item.id) ? (
             <Button sx={{ display: "flex", alignItems: "center" }}>
               <BookmarkRemoveIcon
+                sx={{ color: "#D8D9DA" }}
                 onClick={() => {
                   const a = window.confirm("Are you sure?");
                   if (a) {
@@ -232,7 +246,7 @@ export default function ProductItem({ item, likes }) {
               onClick={objHolder}
               sx={{ display: "flex", alignItems: "center" }}
             >
-              <BookmarkIcon sx={{ color: "#64CCC5" }} />
+              <BookmarkIcon sx={{ color: "#FFF6E0" }} />
             </Button>
           )
         ) : (

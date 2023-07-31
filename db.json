@@ -12,7 +12,8 @@
         "admin1@gmail.com",
         "krasavachic@gmail.com",
         "huysos228@gmail.com"
-      ]
+      ],
+      "hovered": true
     },
     {
       "id": 3,
@@ -22,10 +23,8 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": [
-        "admin1@gmail.com",
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com", "krasavachic@gmail.com"],
+      "hovered": true
     },
     {
       "id": 4,
@@ -35,10 +34,8 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": [
-        "admin1@gmail.com",
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"],
+      "hovered": true
     },
     {
       "id": 5,
@@ -48,10 +45,8 @@
       "price": 299.9,
       "category": "спорт",
       "selected": true,
-      "likes": [
-        "admin1@gmail.com",
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"],
+      "hovered": true
     },
     {
       "id": 6,
@@ -61,9 +56,8 @@
       "price": 79,
       "category": "техника",
       "selected": false,
-      "likes": [
-        "admin1@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com"],
+      "hovered": true
     },
     {
       "id": 7,
@@ -73,10 +67,8 @@
       "price": 1000,
       "category": "мебель",
       "selected": true,
-      "likes": [
-        "admin1@gmail.com",
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["admin1@gmail.com", "krasavachic@gmail.com"],
+      "hovered": true
     },
     {
       "id": 9,
@@ -86,9 +78,8 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": [
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["krasavachic@gmail.com"],
+      "hovered": true
     },
     {
       "id": 10,
@@ -98,9 +89,8 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": [
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["krasavachic@gmail.com", "huysos228@gmail.com"],
+      "hovered": true
     },
     {
       "id": 11,
@@ -110,9 +100,8 @@
       "price": 1,
       "category": "электроника",
       "selected": true,
-      "likes": [
-        "krasavachic@gmail.com"
-      ]
+      "likes": ["krasavachic@gmail.com"],
+      "hovered": true
     },
     {
       "id": 12,
@@ -122,7 +111,8 @@
       "price": 999.5,
       "category": "красота",
       "selected": false,
-      "likes": []
+      "likes": ["krasavachic@gmail.com"],
+      "hovered": true
     },
     {
       "id": 13,
@@ -132,17 +122,20 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": []
+      "likes": [],
+      "hovered": true
     },
+
     {
       "id": 14,
       "title": "Пример товара 4",
       "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
+      "description": "asdfghjk",
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": []
+      "likes": [],
+      "hovered": true
     },
     {
       "id": 15,
@@ -152,7 +145,8 @@
       "price": 299.9,
       "category": "спорт",
       "selected": true,
-      "likes": []
+      "likes": [],
+      "hovered": true
     },
     {
       "id": 16,
@@ -162,837 +156,52 @@
       "price": 79,
       "category": "техника",
       "selected": false,
-      "likes": []
+      "likes": [],
+      "hovered": true
     },
     {
       "id": 17,
       "title": "Пример товара 7",
       "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
       "description": "Описание товара 7",
-      "price": 999,
+      "price": 1000,
       "category": "мебель",
       "selected": true,
-      "likes": []
+      "likes": [],
+      "hovered": true
     },
     {
       "id": 18,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
+      "title": "Пример товара 9",
+      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
+      "description": "Описание товара 9",
+      "price": 599,
+      "category": "мода",
+      "selected": true,
+      "likes": [],
+      "hovered": true
     },
     {
       "id": 19,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
+      "title": "Пример товара 10",
+      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
+      "description": "Описание товара 10",
+      "price": 49.99,
+      "category": "книги",
+      "selected": false,
+      "likes": [],
+      "hovered": true
     },
     {
       "id": 20,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 21,
-      "title": "Пример товара 1",
+      "title": "qwertyui",
       "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
       "description": "Описание товара 1",
-      "price": 1999.99,
+      "price": 1,
       "category": "электроника",
       "selected": true,
-      "likes": []
-    },
-    {
-      "id": 22,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 23,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 24,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 25,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 26,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 27,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 28,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 29,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 30,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 31,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 32,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 33,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 34,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 35,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 36,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 37,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 38,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 39,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 40,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 41,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 42,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 43,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 44,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 45,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 46,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 47,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 48,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 49,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 50,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 51,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 52,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 53,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 54,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 55,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 56,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 57,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 58,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 59,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 60,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 61,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 62,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 63,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 64,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 65,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 66,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 67,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 68,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 69,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 70,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 71,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 72,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 73,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 74,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 75,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 76,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 77,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 78,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 79,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 80,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 82,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 83,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 84,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 85,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 86,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 87,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 88,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 89,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 90,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 91,
-      "title": "Пример товара 1",
-      "photo": "https://avatars.mds.yandex.net/i?id=8ad5caed6fdf82141dfe27b9db0c94c74e8df883-8497071-images-thumbs&n=13",
-      "description": "Описание товара 1",
-      "price": 1999.99,
-      "category": "электроника",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 92,
-      "title": "Пример товара 2",
-      "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-      "description": "Описание товара 2",
-      "price": 999.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 93,
-      "title": "Пример товара 3",
-      "photo": "https://avatars.mds.yandex.net/i?id=a2ba5073b343d986e207287cfce5d65bdbef1358-9233044-images-thumbs&n=13",
-      "description": "Описание товара 3",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 94,
-      "title": "Пример товара 4",
-      "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-      "description": "Описание товара 4",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 95,
-      "title": "Пример товара 5",
-      "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-      "description": "Описание товара 5",
-      "price": 299.9,
-      "category": "спорт",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 96,
-      "title": "Пример товара 6",
-      "photo": "https://avatars.mds.yandex.net/i?id=a0cce6ddc0869b268c58c32aa2cdeb2dac7a59d4-9041932-images-thumbs&n=13",
-      "description": "Описание товара 6",
-      "price": 79,
-      "category": "техника",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 97,
-      "title": "Пример товара 7",
-      "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
-      "description": "Описание товара 7",
-      "price": 999,
-      "category": "мебель",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 98,
-      "title": "Пример товара 8",
-      "photo": "https://avatars.mds.yandex.net/i?id=91f12c8f1e80cee8a4147c6ec234285d3a757255-9228969-images-thumbs&n=13",
-      "description": "Описание товара 8",
-      "price": 199.5,
-      "category": "красота",
-      "selected": false,
-      "likes": []
-    },
-    {
-      "id": 99,
-      "title": "Пример товара 9",
-      "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
-      "description": "Описание товара 9",
-      "price": 599,
-      "category": "мода",
-      "selected": true,
-      "likes": []
-    },
-    {
-      "id": 100,
-      "title": "Пример товара 10",
-      "photo": "https://avatars.mds.yandex.net/i?id=f9b8d3216648b3ea5d3c3a842fb36bfbaa95e400-9459824-images-thumbs&n=13",
-      "description": "Описание товара 10",
-      "price": 49.99,
-      "category": "книги",
-      "selected": false,
-      "likes": []
+      "likes": [],
+      "hovered": true
     }
   ],
   "users": [
@@ -1077,34 +286,6 @@
     }
   ],
   "favorite": [
-    {
-      "item": {
-        "id": 4,
-        "title": "qwertyuiolра 4",
-        "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
-        "description": "asdfghjk",
-        "price": 49.99,
-        "category": "книги",
-        "selected": false
-      },
-      "email": "krasavachic@gmail.com",
-      "itemId": 4,
-      "id": "krasavachic4"
-    },
-    {
-      "item": {
-        "id": 5,
-        "title": "Пример товара 5",
-        "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
-        "description": "Описание товара 5",
-        "price": 299.9,
-        "category": "спорт",
-        "selected": true
-      },
-      "email": "krasavachic@gmail.com",
-      "itemId": 5,
-      "id": "krasavachic5"
-    },
     {
       "item": {
         "id": 3,
@@ -1216,6 +397,81 @@
       "email": "pidor@gmail.com",
       "itemId": 5,
       "id": "pidor5"
+    },
+    {
+      "item": {
+        "id": 17,
+        "title": "Пример товара 7",
+        "photo": "https://avatars.mds.yandex.net/i?id=ca1af1b6b86a5cba7ae02b313d64e49b44c5fc22-9221446-images-thumbs&n=13",
+        "description": "Описание товара 7",
+        "price": 999,
+        "category": "мебель",
+        "selected": true,
+        "likes": []
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 17,
+      "id": "krasavachic17"
+    },
+    {
+      "item": {
+        "id": 9,
+        "title": "Пример товара 9",
+        "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
+        "description": "Описание товара 9",
+        "price": 599,
+        "category": "мода",
+        "selected": true,
+        "likes": ["krasavachic@gmail.com"]
+      },
+      "email": "huysos228@gmail.com",
+      "itemId": 9,
+      "id": "huysos2289"
+    },
+    {
+      "item": {
+        "id": 5,
+        "title": "Пример товара 5",
+        "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
+        "description": "Описание товара 5",
+        "price": 299.9,
+        "category": "спорт",
+        "selected": true,
+        "likes": ["admin1@gmail.com"]
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 5,
+      "id": "krasavachic5"
+    },
+    {
+      "item": {
+        "id": 4,
+        "title": "qwertyuiolра 4",
+        "photo": "https://avatars.mds.yandex.net/i?id=e240154a910668f5227e2d226f525a7be7d604ef-8071678-images-thumbs&n=13",
+        "description": "asdfghjk",
+        "price": 49.99,
+        "category": "книги",
+        "selected": false,
+        "likes": ["admin1@gmail.com", "krasavachic@gmail.com"]
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 4,
+      "id": "krasavachic4"
+    },
+    {
+      "item": {
+        "id": 9,
+        "title": "Пример товара 9",
+        "photo": "https://avatars.mds.yandex.net/i?id=e446dcddeaa18e2037be51175e3ba991a122b4b3-9065873-images-thumbs&n=13",
+        "description": "Описание товара 9",
+        "price": 599,
+        "category": "мода",
+        "selected": true,
+        "likes": ["krasavachic@gmail.com"]
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 9,
+      "id": "krasavachic9"
     }
   ]
 }

@@ -48,11 +48,14 @@ function FavouriteContext({ children }) {
     }
   }
 
-  function isAlreadyInFavorite(id) {
-    return favorit.some(
-      (item) => item.email === user.email && item.itemId === id
-    );
-  }
+  const isAlreadyInFavorite = (id) => {
+    if (user && typeof user.email === "string") {
+      return favorit.some(
+        (item) => item.email === user.email && item.itemId === id
+      );
+    }
+    return false; // Return false when user is null or user.email is not a string
+  };
 
   const value = {
     getFavorite,
