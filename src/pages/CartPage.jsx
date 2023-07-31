@@ -21,7 +21,6 @@ import { DoDisturb } from "@mui/icons-material";
 function CartPage() {
   const { cart, getCart, increaseCount, decreaseCount, deleteProductFromCart } =
     useCartContext();
-  const [picture, setPicture] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -111,8 +110,6 @@ function CartPage() {
           >
             <div
               onClick={() => navigate(`/details/${item.id}`)}
-              onMouseEnter={() => setPicture(false)}
-              onMouseLeave={() => setPicture(true)}
               style={{
                 position: "relative",
                 overflow: "hidden",
@@ -124,32 +121,7 @@ function CartPage() {
                 borderRadius: "15px",
                 cursor: "pointer",
               }}
-            >
-              {!picture && (
-                <div
-                  className="overlay"
-                  style={{
-                    position: "absolute",
-                    borderRadius: "10px",
-                    left: 0,
-                    top: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: "500",
-                    fontSize: "18px",
-                    color: "white" /* Updated color to white */,
-                    width: "100%",
-                    height: "100%",
-                    backdropFilter: "blur(10px)",
-                    boxShadow:
-                      "0px 4px 10px rgba(0, 0, 0, 0.25)" /* Added box shadow */,
-                  }}
-                >
-                  <p>Your Text Here</p>
-                </div>
-              )}
-            </div>
+            ></div>
 
             <h2 style={{ color: "#FFF6E0" }}>{item.title.slice(0, 18)}...</h2>
             <div style={{ color: "#FFF6E0" }}>

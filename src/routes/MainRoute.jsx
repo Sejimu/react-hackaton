@@ -9,7 +9,7 @@ import AuthPage from "../pages/AuthPage";
 import DetailsPage from "../pages/DetailsPage";
 import CartPage from "../pages/CartPage";
 import UserProtectedRoute from "./UserProtectedRoute";
-import Favorites from "../pages/Favorites";
+import FavoritesPage from "../pages/Favorites";
 import SuccessPage from "../pages/SuccessPage";
 import Payment from "../pages/Payment";
 import ProfilePage from "../pages/ProfilePage";
@@ -24,10 +24,14 @@ function MainRoute() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/add" element={<AddProducts />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/fav" element={<Favorites />} />
+
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/fav" element={<FavoritesPage />} />
+
           <Route path="/edit/:id" element={<EditPage />} />
         </Route>
       </Route>
+
       <Route path="/auth" element={<AuthPage />} />
 
       <Route path="/payment" element={<Payment />} />

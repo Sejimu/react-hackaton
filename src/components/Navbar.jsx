@@ -22,6 +22,7 @@ import LiveSearch from "./LiveSearch";
 import { useCartContext } from "../contexts/CartContext";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import { Image } from "@mui/icons-material";
+import { useFavouriteContext } from "../contexts/FavouriteContext";
 
 const pages = [
   {
@@ -38,10 +39,22 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [userka, setUserka] = useState(false);
+  const [filtered, setFiltered] = useState(0);
+  const { getFavorite, deleteFavorite, favorit } = useFavouriteContext();
 
   useEffect(() => {
     getCart();
+    getFavorite();
   }, []);
+
+  useEffect(() => {
+    if (user) {
+      const filter = favorit.filter((item) => {
+        return item.email === user.email;
+      });
+      setFiltered(filter.length);
+    }
+  }, [favorit]);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -59,6 +72,8 @@ export default function Navbar() {
       } else {
         setUserka({ displayName: user.displayName });
       }
+    } else {
+      setUserka(false);
     }
   }, [user]);
 
@@ -67,7 +82,7 @@ export default function Navbar() {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "black",
+          backgroundColor: "#272829",
           top: "0",
         }}
       >
@@ -140,7 +155,7 @@ export default function Navbar() {
                   component={Link}
                   to="/fav"
                 >
-                  <Badge badgeContent={cart.products.length} color="error">
+                  <Badge badgeContent={filtered} color="error">
                     <BookmarksIcon />
                   </Badge>
                 </IconButton>

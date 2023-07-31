@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App" style={{ backgroundColor: "#001C30" }}>
+    <div className="App" style={{ backgroundColor: "#D8D9DA" }}>
       <MainRoute />
     </div>
   );

@@ -32,8 +32,8 @@ function DetailsPage() {
       className="detailsHolder"
       style={{
         marginTop: "100px",
-        width: "100vw",
-        backgroundColor: "#001c30",
+        width: "100%",
+        backgroundColor: "#D8D9DA",
       }}
     >
       {!item ? (
