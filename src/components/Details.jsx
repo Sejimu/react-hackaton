@@ -12,13 +12,23 @@ const Details = ({ item }) => {
   const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState({});
   const [commentVal, setCommentVal] = useState("");
+  const [userka, setUserka] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      if (typeof user === "boolean") {
+        console.log("huinia");
+        setUserka(false);
+      } else {
+        console.log("works");
+        setUserka(user.email);
+        setUserInfo(user);
+      }
+    }
+  }, [user]);
 
   const { id } = useParams();
   console.log(id);
-
-  useEffect(() => {
-    setUserInfo(user);
-  }, [user]);
 
   useEffect(() => {
     getComments();
@@ -55,28 +65,32 @@ const Details = ({ item }) => {
             <p>{dollars} kgs </p>
             <p>{item.price} $ </p>
           </div>
-          {user ? <div>{userInfo.email}</div> : <div></div>}
-          {isAdmin() ? (
-            <div className="buttonsholder">
-              <button
-                className="DeleteDetails"
-                onClick={() => {
-                  const a = window.confirm("Are you sure?");
-                  if (a) {
-                    deleteProduct(item.id);
-                    navigate(-1);
-                  }
-                }}
-              >
-                Delete
-              </button>
-              <button
-                onClick={() => navigate(`/edit/${item.id}`)}
-                className="EditDetails"
-              >
-                Edit
-              </button>
-            </div>
+          {userka ? <div>{item.user}</div> : <div></div>}
+          {userka ? (
+            item.user === userka || isAdmin() ? (
+              <div className="buttonsholder">
+                <button
+                  className="DeleteDetails"
+                  onClick={() => {
+                    const a = window.confirm("Are you sure?");
+                    if (a) {
+                      deleteProduct(item.id);
+                      navigate(-1);
+                    }
+                  }}
+                >
+                  Delete
+                </button>
+                <button
+                  onClick={() => navigate(`/edit/${item.id}`)}
+                  className="EditDetails"
+                >
+                  Edit
+                </button>
+              </div>
+            ) : (
+              ""
+            )
           ) : (
             ""
           )}
@@ -94,27 +108,31 @@ const Details = ({ item }) => {
           Category: {item.category}
         </Typography>
       </div>
-      {user ? (
+      {userka ? (
         <div className="comments">
           <form onSubmit={handleSubmit}>
             <div className="comments_input">
-              <div className="comments_input_box">
-                <div className="comments_input_first">
-                  <img width="80" src="" alt="" />
-                  <h4>Оставьте свой отзыв</h4>
-                </div>
-                <div className="comments_input_second">
-                  <textarea
-                    rows="5"
-                    cols="100"
+              <div className="comments_input_first">
+                <img width="80" src="" alt="" />
+                <h4>Оставьте свой отзыв</h4>
+              </div>
+              <div className="comments_input_second">
+                <div className="form">
+                  <input
+                    className="input"
+                    placeholder="Type your text"
+                    required
+                    type="text"
                     value={commentVal}
                     onChange={handleChange}
-                  ></textarea>
+                  />
+                  <span className="input-border"></span>
                 </div>
-                <button>Comment</button>
               </div>
+              <button>Comment</button>
             </div>
           </form>
+
           {comments
             .filter((item) => id === item.productId)
             .map((item, index) => (
@@ -128,7 +146,19 @@ const Details = ({ item }) => {
             ))}
         </div>
       ) : (
-        ""
+        <div>
+          {comments
+            .filter((item) => id === item.productId)
+            .map((item, index) => (
+              <div className="comments_comment" key={index}>
+                <div>
+                  <img width="80" src="" alt="" />
+                  <h3>{item.userEmail}</h3>
+                </div>
+                <p>{item.comment}</p>
+              </div>
+            ))}
+        </div>
       )}
     </div>
   );

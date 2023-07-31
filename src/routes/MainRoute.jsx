@@ -9,22 +9,21 @@ import AuthPage from "../pages/AuthPage";
 import DetailsPage from "../pages/DetailsPage";
 import CartPage from "../pages/CartPage";
 import UserProtectedRoute from "./UserProtectedRoute";
-import AdminProtectedRoute from "./AdminProtectedRoute";
 import Favorites from "../pages/Favorites";
+import ProfilePage from "../pages/ProfilePage";
 
 function MainRoute() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route element={<AdminProtectedRoute />}>
-          <Route path="/add" element={<AddProducts />} />
-          <Route path="/edit/:id" element={<EditPage />} />
-        </Route>
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route element={<UserProtectedRoute />}>
+          <Route path="/add" element={<AddProducts />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/fav" element={<Favorites />} />
+          <Route path="/edit/:id" element={<EditPage />} />
         </Route>
       </Route>
       <Route path="/auth" element={<AuthPage />} />

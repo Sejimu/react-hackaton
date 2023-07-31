@@ -114,47 +114,52 @@ export default function ProductItem({ item, likes }) {
         overflow: "hidden",
       }}
     >
-      {isAdmin() ? (
-        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-          <IconButton onClick={handleClick} aria-label="settings">
-            {isAdmin() && <MoreVertIcon sx={{ color: "#FFF6E0" }} />}
-          </IconButton>
+      {userka ? (
+        isAdmin() || userka === item.user ? (
+          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+            <IconButton onClick={handleClick} aria-label="settings">
+              <MoreVertIcon sx={{ color: "#FFF6E0" }} />
+            </IconButton>
 
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            <MenuItem
-              component={Button}
-              endIcon={<DeleteIcon />}
-              sx={{ textTransform: "capitalize", color: "red" }}
-              onClick={() => {
-                const a = window.confirm("Are you sure?");
-                if (a) {
-                  deleteProduct(item.id);
-                }
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
               }}
             >
-              Delete
-            </MenuItem>
-            <MenuItem
-              component={Button}
-              endIcon={<EditIcon />}
-              sx={{ textTransform: "capitalize", width: "100%" }}
-              onClick={() => navigate(`/edit/${item.id}`)}
-            >
-              Edit
-            </MenuItem>
-          </Menu>
-        </Box>
+              <MenuItem
+                component={Button}
+                endIcon={<DeleteIcon />}
+                sx={{ textTransform: "capitalize", color: "red" }}
+                onClick={() => {
+                  const a = window.confirm("Are you sure?");
+                  if (a) {
+                    deleteProduct(item.id);
+                  }
+                }}
+              >
+                Delete
+              </MenuItem>
+              <MenuItem
+                component={Button}
+                endIcon={<EditIcon />}
+                sx={{ textTransform: "capitalize", width: "100%" }}
+                onClick={() => navigate(`/edit/${item.id}`)}
+              >
+                Edit
+              </MenuItem>
+            </Menu>
+          </Box>
+        ) : (
+          ""
+        )
       ) : (
         ""
       )}
+
       <CardMedia
         sx={{ height: 140 }}
         onClick={() => navigate(`/details/${item.id}`)}
@@ -234,10 +239,7 @@ export default function ProductItem({ item, likes }) {
               <BookmarkRemoveIcon
                 sx={{ color: "#D8D9DA" }}
                 onClick={() => {
-                  const a = window.confirm("Are you sure?");
-                  if (a) {
-                    deleteFavorite(userEmailId);
-                  }
+                  deleteFavorite(userEmailId);
                 }}
               />
             </Button>

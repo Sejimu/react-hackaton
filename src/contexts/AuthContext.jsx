@@ -50,10 +50,6 @@ function AuthContext({ children }) {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user);
-      console.log(user);
-      if (user === "null") {
-        setasdasdas("SSAsa");
-      }
     });
   }, []);
 
