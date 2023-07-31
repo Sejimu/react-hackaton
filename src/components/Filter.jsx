@@ -50,6 +50,7 @@ export default function Filter() {
       exclusive
       onChange={handleChange}
       aria-label="Platform"
+      className="filter"
     >
       <ToggleButton value="all">
         <AllInclusiveIcon sx={{ color: "#FFF6E0" }} />

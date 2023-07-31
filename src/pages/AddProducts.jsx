@@ -60,7 +60,12 @@ export default function AddProducts() {
       <Container
         component="main"
         maxWidth="xs"
-        sx={{ color: "#DAFFFB", backgroundColor: "#001C30", height: "100vh" }}
+        sx={{
+          color: "#DAFFFB",
+          backgroundColor: "#001C30",
+          height: "100vh",
+          marginBottom: "90px",
+        }}
       >
         <CssBaseline />
         <Box

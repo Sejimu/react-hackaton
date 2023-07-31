@@ -19,10 +19,13 @@ function LiveSearch() {
   }, [searchVal]);
 
   return (
-    <Box sx={{ display: "flex", ml: 2, alignItems: "center" }}>
+    <Box
+      sx={{ display: "flex", ml: 2, alignItems: "center" }}
+      className="big_search"
+    >
       <SearchIcon />
       <InputBase
-        className="searchAria"
+        className="searchAria search_live"
         value={searchVal}
         onChange={(e) => setSearchVal(e.target.value)}
         placeholder="Search…"

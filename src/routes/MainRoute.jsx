@@ -14,7 +14,6 @@ import SuccessPage from "../pages/SuccessPage";
 import Payment from "../pages/Payment";
 import ProfilePage from "../pages/ProfilePage";
 
-
 function MainRoute() {
   return (
     <Routes>
@@ -22,9 +21,9 @@ function MainRoute() {
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route element={<UserProtectedRoute />}>
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/add" element={<AddProducts />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/fav" element={<Favorites />} />
           <Route path="/edit/:id" element={<EditPage />} />
         </Route>

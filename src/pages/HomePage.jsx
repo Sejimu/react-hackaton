@@ -6,6 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import { useProductContext } from "../contexts/ProductContext";
 import Footer from "../components/Footer";
 import Filter from "../components/Filter";
+import FootNavbar from "../components/FootNavbar";
 
 function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
