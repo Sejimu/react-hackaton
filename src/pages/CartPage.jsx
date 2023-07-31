@@ -63,7 +63,7 @@ function CartPage() {
         >
           Total Price: ${cart.totalPrice.toFixed(2)}
         </Typography>
-        <Link to="/success">
+        <Link to="/payment">
           <button
             className="cart_button"
             style={{
@@ -75,7 +75,7 @@ function CartPage() {
               width: "90px",
               borderRadius: "6px",
             }}
-            to="/success"
+            to="/payment"
           >
             BUY
           </button>

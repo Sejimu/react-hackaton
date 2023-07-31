@@ -234,24 +234,7 @@
     }
   ],
   "comments": [
-    {
-      "productId": "2",
-      "comment": "qwertyuiuytrewq",
-      "userEmail": "user2@gmail.com",
-      "id": 1
-    },
-    {
-      "productId": "4",
-      "comment": "asdfghjk",
-      "userEmail": "user1@gmail.com",
-      "id": 2
-    },
-    {
-      "productId": "4",
-      "comment": "asdfghj",
-      "userEmail": "user1@gmail.com",
-      "id": 3
-    }
   ],
   "favorite": []
 }
+
