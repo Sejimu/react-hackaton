@@ -24,13 +24,22 @@ function HomePage() {
     });
   }, [page]);
   return (
-    <div>
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexFlow: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <Box
         sx={{
           maxWidth: "max-content",
           margin: "30px auto",
-          marginTop: "100px",
-          background: "white",
+          marginTop: "90px",
+          background: "black",
+          borderRadius: "10px",
+          overflow: "hidden",
         }}
       >
         <Filter />
@@ -38,18 +47,18 @@ function HomePage() {
       <ProductsList />
       <Box
         sx={{
-          display: "flex",
+          width: "100%",
           justifyContent: "center",
-          backgroundColor: "#176B87",
-          color: "#dafffb",
-          py: "15px",
+          display: "flex",
+          marginTop: "20px",
+          marginBottom: "20px",
         }}
       >
         <Pagination
           count={pageTotalCount}
           page={page}
           onChange={(_, val) => setPage(val)}
-          color="primary"
+          color="standard"
         />
       </Box>
       <Footer />

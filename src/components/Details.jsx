@@ -94,38 +94,42 @@ const Details = ({ item }) => {
           Category: {item.category}
         </Typography>
       </div>
-      <div className="comments">
-        <form onSubmit={handleSubmit}>
-          <div className="comments_input">
-            <div className="comments_input_box">
-              <div className="comments_input_first">
-                <img width="80" src="" alt="" />
-                <h4>Оставьте свой отзыв</h4>
+      {user ? (
+        <div className="comments">
+          <form onSubmit={handleSubmit}>
+            <div className="comments_input">
+              <div className="comments_input_box">
+                <div className="comments_input_first">
+                  <img width="80" src="" alt="" />
+                  <h4>Оставьте свой отзыв</h4>
+                </div>
+                <div className="comments_input_second">
+                  <textarea
+                    rows="5"
+                    cols="100"
+                    value={commentVal}
+                    onChange={handleChange}
+                  ></textarea>
+                </div>
+                <button>Comment</button>
               </div>
-              <div className="comments_input_second">
-                <textarea
-                  rows="5"
-                  cols="100"
-                  value={commentVal}
-                  onChange={handleChange}
-                ></textarea>
-              </div>
-              <button>Comment</button>
             </div>
-          </div>
-        </form>
-        {comments
-          .filter((item) => id === item.productId)
-          .map((item, index) => (
-            <div className="comments_comment" key={index}>
-              <div>
-                <img width="80" src="" alt="" />
-                <h3>{item.userEmail}</h3>
+          </form>
+          {comments
+            .filter((item) => id === item.productId)
+            .map((item, index) => (
+              <div className="comments_comment" key={index}>
+                <div>
+                  <img width="80" src="" alt="" />
+                  <h3>{item.userEmail}</h3>
+                </div>
+                <p>{item.comment}</p>
               </div>
-              <p>{item.comment}</p>
-            </div>
-          ))}
-      </div>
+            ))}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

@@ -12,8 +12,11 @@ function ProductsList() {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor: "#001C30", height: "100%" }}>
-      <Typography variant="h3" sx={{ mb: "40px", pt: "90px" }}>
+    <Box sx={{ backgroundColor: "# ", height: "100%" }}>
+      <Typography
+        variant="h3"
+        sx={{ mb: "40px", pt: "10px", color: "black", fontWeight: "600" }}
+      >
         All Products
       </Typography>
       <Box

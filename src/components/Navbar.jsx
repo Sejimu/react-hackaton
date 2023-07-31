@@ -16,12 +16,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAuthContext } from "../contexts/AuthContext";
-import { Avatar, Button } from "@mui/material";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { useProductContext } from "../contexts/ProductContext";
 import LiveSearch from "./LiveSearch";
 import { useCartContext } from "../contexts/CartContext";
+import BookmarksIcon from "@mui/icons-material/Bookmarks";
 
 const pages = [
   {
@@ -53,11 +52,10 @@ export default function Navbar() {
 
   return (
     <Box sx={{ display: { md: "flex" } }}>
-      <Box sx={{ flexGrow: 1 }} />
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "#001C30",
+          backgroundColor: "black",
           top: "0",
         }}
       >
@@ -88,35 +86,39 @@ export default function Navbar() {
             >
               OFOFO
             </Typography>
-            <Box sx={{ display: "flex", ml: 2 }}>
-              {isAdmin() &&
-                pages.map((page) => (
-                  <Button
-                    component={NavLink}
-                    to={page.link}
-                    sx={{ my: 2, color: "#F0F0F0" }}
-                    key={page.title}
-                  >
-                    {page.title}
-                  </Button>
-                ))}
-            </Box>
           </Box>
 
           {location.pathname === "/" && <LiveSearch />}
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-              component={Link}
-              to="/cart"
-            >
-              <Badge badgeContent={cart.products.length} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+            {user ? (
+              <>
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="inherit"
+                  component={Link}
+                  to="/fav"
+                >
+                  <Badge badgeContent={cart.products.length} color="error">
+                    <BookmarksIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="inherit"
+                  component={Link}
+                  to="/cart"
+                >
+                  <Badge badgeContent={cart.products.length} color="error">
+                    <ShoppingCartIcon />
+                  </Badge>
+                </IconButton>
+              </>
+            ) : (
+              ""
+            )}
 
             {!user ? (
               <Button component={Link} to="/auth" sx={{ color: "#F0F0F0" }}>
@@ -154,11 +156,11 @@ export default function Navbar() {
                   onClose={handleClose}
                   anchorOrigin={{
                     vertical: "top",
-                    horizontal: "left",
+                    horizontal: "right",
                   }}
                   transformOrigin={{
                     vertical: "top",
-                    horizontal: "left",
+                    horizontal: "right",
                   }}
                 >
                   <MenuItem

@@ -10,6 +10,7 @@ import DetailsPage from "../pages/DetailsPage";
 import CartPage from "../pages/CartPage";
 import UserProtectedRoute from "./UserProtectedRoute";
 import AdminProtectedRoute from "./AdminProtectedRoute";
+import Favorites from "../pages/Favorites";
 
 function MainRoute() {
   return (
@@ -23,6 +24,7 @@ function MainRoute() {
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route element={<UserProtectedRoute />}>
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/fav" element={<Favorites />} />
         </Route>
       </Route>
       <Route path="/auth" element={<AuthPage />} />

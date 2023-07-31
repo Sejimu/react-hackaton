@@ -22,6 +22,7 @@ function LiveSearch() {
     <Box sx={{ display: "flex", ml: 2, alignItems: "center" }}>
       <SearchIcon />
       <InputBase
+        className="searchAria"
         value={searchVal}
         onChange={(e) => setSearchVal(e.target.value)}
         placeholder="Search…"
@@ -29,8 +30,8 @@ function LiveSearch() {
         sx={{
           width: "400px",
           marginRight: "100px",
-          color: "#DAFFFB",
-          backgroundColor: "#176B87",
+          color: "black",
+          backgroundColor: "#D8D9DA",
           borderRadius: "30px",
           padding: "5px",
         }}

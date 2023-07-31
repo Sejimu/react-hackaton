@@ -45,35 +45,35 @@ export default function Filter() {
 
   return (
     <ToggleButtonGroup
-      color="primary"
+      color="success"
       value={category}
       exclusive
       onChange={handleChange}
       aria-label="Platform"
     >
       <ToggleButton value="all">
-        <AllInclusiveIcon />
+        <AllInclusiveIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="книги">
-        <AutoStoriesIcon />
+        <AutoStoriesIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="мода">
-        <AutoAwesomeIcon />
+        <AutoAwesomeIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="мебель">
-        <WeekendIcon />
+        <WeekendIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="техника">
-        <LocalLaundryServiceIcon />
+        <LocalLaundryServiceIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="спорт">
-        <SportsMartialArtsIcon />
+        <SportsMartialArtsIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="электроника">
-        <DevicesIcon />
+        <DevicesIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
       <ToggleButton value="недвижимость">
-        <HomeIcon />
+        <HomeIcon sx={{ color: "#FFF6E0" }} />
       </ToggleButton>
     </ToggleButtonGroup>
   );
