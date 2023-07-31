@@ -11,6 +11,8 @@ import CartPage from "../pages/CartPage";
 import UserProtectedRoute from "./UserProtectedRoute";
 import AdminProtectedRoute from "./AdminProtectedRoute";
 import Favorites from "../pages/Favorites";
+import SuccessPage from "../pages/SuccessPage";
+import Payment from "../pages/Payment";
 
 function MainRoute() {
   return (
@@ -28,6 +30,9 @@ function MainRoute() {
         </Route>
       </Route>
       <Route path="/auth" element={<AuthPage />} />
+
+      <Route path="/payment" element={<Payment />} />
+      <Route path="/success" element={<SuccessPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

@@ -23,7 +23,10 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": ["admin1@gmail.com", "krasavachic@gmail.com"],
+      "likes": [
+        "krasavachic@gmail.com",
+        "admin1@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -34,7 +37,7 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": ["admin1@gmail.com"],
+      "likes": [],
       "hovered": true
     },
     {
@@ -45,7 +48,9 @@
       "price": 299.9,
       "category": "спорт",
       "selected": true,
-      "likes": ["admin1@gmail.com"],
+      "likes": [
+        "admin1@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -56,7 +61,9 @@
       "price": 79,
       "category": "техника",
       "selected": false,
-      "likes": ["admin1@gmail.com"],
+      "likes": [
+        "admin1@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -67,7 +74,10 @@
       "price": 1000,
       "category": "мебель",
       "selected": true,
-      "likes": ["admin1@gmail.com", "krasavachic@gmail.com"],
+      "likes": [
+        "admin1@gmail.com",
+        "krasavachic@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -78,7 +88,10 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": ["krasavachic@gmail.com"],
+      "likes": [
+        "krasavachic@gmail.com",
+        "admin1@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -89,7 +102,10 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": ["krasavachic@gmail.com", "huysos228@gmail.com"],
+      "likes": [
+        "krasavachic@gmail.com",
+        "huysos228@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -100,7 +116,9 @@
       "price": 1,
       "category": "электроника",
       "selected": true,
-      "likes": ["krasavachic@gmail.com"],
+      "likes": [
+        "krasavachic@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -111,7 +129,9 @@
       "price": 999.5,
       "category": "красота",
       "selected": false,
-      "likes": ["krasavachic@gmail.com"],
+      "likes": [
+        "krasavachic@gmail.com"
+      ],
       "hovered": true
     },
     {
@@ -125,7 +145,6 @@
       "likes": [],
       "hovered": true
     },
-
     {
       "id": 14,
       "title": "Пример товара 4",
@@ -283,6 +302,12 @@
       "comment": "qw3ertyutr",
       "userEmail": "krasavachic@gmail.com",
       "id": 7
+    },
+    {
+      "productId": "3",
+      "comment": "qwert",
+      "userEmail": "admin1@gmail.com",
+      "id": 8
     }
   ],
   "favorite": [
@@ -422,7 +447,9 @@
         "price": 599,
         "category": "мода",
         "selected": true,
-        "likes": ["krasavachic@gmail.com"]
+        "likes": [
+          "krasavachic@gmail.com"
+        ]
       },
       "email": "huysos228@gmail.com",
       "itemId": 9,
@@ -437,7 +464,9 @@
         "price": 299.9,
         "category": "спорт",
         "selected": true,
-        "likes": ["admin1@gmail.com"]
+        "likes": [
+          "admin1@gmail.com"
+        ]
       },
       "email": "krasavachic@gmail.com",
       "itemId": 5,
@@ -452,7 +481,10 @@
         "price": 49.99,
         "category": "книги",
         "selected": false,
-        "likes": ["admin1@gmail.com", "krasavachic@gmail.com"]
+        "likes": [
+          "admin1@gmail.com",
+          "krasavachic@gmail.com"
+        ]
       },
       "email": "krasavachic@gmail.com",
       "itemId": 4,
@@ -467,11 +499,31 @@
         "price": 599,
         "category": "мода",
         "selected": true,
-        "likes": ["krasavachic@gmail.com"]
+        "likes": [
+          "krasavachic@gmail.com"
+        ]
       },
       "email": "krasavachic@gmail.com",
       "itemId": 9,
       "id": "krasavachic9"
+    },
+    {
+      "item": {
+        "id": 5,
+        "title": "Пример товара 5",
+        "photo": "https://avatars.mds.yandex.net/i?id=19b5148f00e8d84fa9d4c20ec8eac7b47c6f8463-10036291-images-thumbs&n=13",
+        "description": "Описание товара 5",
+        "price": 299.9,
+        "category": "спорт",
+        "selected": true,
+        "likes": [
+          "admin1@gmail.com"
+        ],
+        "hovered": true
+      },
+      "email": "admin1@gmail.com",
+      "itemId": 5,
+      "id": "admin15"
     }
   ]
 }
