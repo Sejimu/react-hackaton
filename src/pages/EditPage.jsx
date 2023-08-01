@@ -59,7 +59,16 @@ export default function EditPage() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs" sx={{ height: "100vh" }}>
+      <Container
+        component="main"
+        maxWidth="xs"
+        sx={{
+          color: "black",
+          backgroundColor: "#D8D9DA",
+          height: "100vh",
+          marginBottom: "90px",
+        }}
+      >
         <CssBaseline />
         <Box
           sx={{
@@ -67,11 +76,12 @@ export default function EditPage() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            color: "#DAFFFB",
+            pt: "40px",
+            color: "black",
           }}
         >
           <Typography component="h1" variant="h5">
-            Изменить Продукт
+            Новый продукт
           </Typography>
           <Box
             component="form"
@@ -79,78 +89,134 @@ export default function EditPage() {
             noValidate
             sx={{ color: "#DAFFFB", mt: 1 }}
           >
-            <TextField
-              margin="normal"
+            <input
+              placeholder="Title"
               required
-              fullWidth
-              label="Title"
               name="title"
               autoFocus
               value={formValue.title}
               onChange={handleChange}
-              sx={{ backgroundColor: "#64CCC5" }}
+              style={{
+                minWidth: "250px",
+                width: "40vw",
+                height: "35px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+                marginBottom: "5px",
+                paddingLeft: "5px",
+                border: "none",
+                borderRadius: "5px",
+              }}
             />
-            <TextField
-              margin="normal"
+
+            <input
+              placeholder="description"
               required
-              fullWidth
               name="description"
-              label="Описание"
               value={formValue.description}
               onChange={handleChange}
-              sx={{ backgroundColor: "#64CCC5" }}
+              style={{
+                minWidth: "250px",
+                width: "40vw",
+                height: "35px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+                marginBottom: "5px",
+                paddingLeft: "5px",
+                border: "none",
+                borderRadius: "5px",
+              }}
             />
-
-            <TextField
-              margin="normal"
+            <input
+              placeholder="Price"
               required
-              fullWidth
               name="price"
-              label="Price"
-              type="number"
               value={formValue.price}
               onChange={handleChange}
-              sx={{ backgroundColor: "#64CCC5" }}
+              style={{
+                minWidth: "250px",
+                width: "40vw",
+                height: "35px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+                marginBottom: "5px",
+                paddingLeft: "5px",
+                border: "none",
+                borderRadius: "5px",
+              }}
             />
-            <TextField
-              margin="normal"
+            <input
+              placeholder="Photo"
               required
-              fullWidth
               name="photo"
-              label="Url"
               value={formValue.photo}
               onChange={handleChange}
-              sx={{ backgroundColor: "#64CCC5", mb: "25px" }}
+              style={{
+                minWidth: "250px",
+                width: "40vw",
+                height: "35px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+                marginBottom: "5px",
+                paddingLeft: "5px",
+                border: "none",
+                borderRadius: "5px",
+              }}
             />
 
-            <FormControl fullWidth>
-              <InputLabel>Категория</InputLabel>
-              <Select
-                value={formValue.category}
-                onChange={handleChange}
-                label="Категория"
-                name="category"
-                sx={{ backgroundColor: "#64CCC5" }}
-              >
-                <MenuItem value={"книги"}>Книги</MenuItem>
-                <MenuItem value={"мода"}>Мода</MenuItem>
-                <MenuItem value={"красота"}>Красота</MenuItem>
-                <MenuItem value={"мебель"}>Мебель</MenuItem>
-                <MenuItem value={"техника"}>Техника</MenuItem>
-                <MenuItem value={"спорт"}>Спорт</MenuItem>
-                <MenuItem value={"электроника"}>Электроника</MenuItem>
-                <MenuItem value={"недвижимость"}>Недвижимость</MenuItem>
-              </Select>
-            </FormControl>
-
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+            <select
+              id="category"
+              name="category"
+              value={formValue.category}
+              onChange={handleChange}
+              style={{
+                color: "white",
+                backgroundColor: "#272829",
+                minWidth: "250px",
+                width: "40vw",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #ddd",
+                outline: "none",
+                height: "35px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+              }}
             >
-              Сохранить изменения
-            </Button>
+              <option value="книги">Книги</option>
+              <option value="мода">Мода</option>
+              <option value="красота">Красота</option>
+              <option value="мебель">Мебель</option>
+              <option value="техника">Техника</option>
+              <option value="спорт">Спорт</option>
+              <option value="электроника">Электроника</option>
+              <option value="недвижимость">Недвижимость</option>
+            </select>
+            <button
+              type="submit"
+              style={{
+                color: "white",
+                backgroundColor: "#272829",
+                minWidth: "250px",
+                width: "40vw",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #ddd",
+                outline: "none",
+                height: "35px",
+                border: "none",
+                color: "white",
+                marginTop: "5px",
+                backgroundColor: "#61677A",
+              }}
+            >
+              Change
+            </button>
           </Box>
         </Box>
       </Container>

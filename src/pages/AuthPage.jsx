@@ -86,85 +86,114 @@ export default function AuthPage() {
           >
             {!isLogin && (
               <>
-                <TextField
-                  margin="normal"
+                <input
+                  placeholder="Name"
                   required
-                  fullWidth
-                  id="name"
-                  label="Full name"
                   name="displayName"
                   autoFocus
-                  sx={{ backgroundColor: "#272829", color: "white" }}
+                  style={{
+                    minWidth: "250px",
+                    width: "40vw",
+                    height: "40px",
+                    border: "none",
+                    color: "white",
+                    backgroundColor: "#272829",
+                    marginBottom: "5px",
+                    paddingLeft: "5px",
+                    borderRadius: "5px",
+                  }}
                 />
-                <TextField
-                  margin="normal"
+
+                <input
+                  placeholder="Photo"
                   required
-                  fullWidth
-                  id="image"
-                  label="Photo"
                   name="photoURL"
-                  sx={{ backgroundColor: "#272829", color: "white" }}
+                  style={{
+                    minWidth: "250px",
+                    width: "40vw",
+                    height: "40px",
+                    border: "none",
+                    color: "white",
+                    backgroundColor: "#272829",
+                    marginBottom: "5px",
+                    paddingLeft: "5px",
+                    borderRadius: "5px",
+                  }}
                 />
-                <TextField
-                  margin="normal"
+
+                <input
+                  placeholder="Phone"
                   required
-                  fullWidth
-                  id="phone"
-                  label="phone"
                   name="phone"
-                  sx={{ backgroundColor: "#272829", color: "white" }}
+                  type="number"
+                  style={{
+                    minWidth: "250px",
+                    width: "40vw",
+                    height: "40px",
+                    border: "none",
+                    color: "white",
+                    backgroundColor: "#272829",
+                    marginBottom: "5px",
+                    paddingLeft: "5px",
+                    borderRadius: "5px",
+                  }}
                 />
               </>
             )}
 
-            <TextField
-              margin="normal"
+            <input
+              placeholder="Email"
               required
-              fullWidth
-              id="email"
-              label="Email Address"
               name="email"
-              autoComplete="email"
-              autoFocus
-              sx={{
-                backgroundColor: "#272829", // Background color for input field
-                color: "white", // Text color
-                "&::placeholder": {
-                  color: "white", // Placeholder text color
-                },
-              }}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              sx={{
-                backgroundColor: "#272829", // Background color for input field
-                color: "white", // Text color
-                "&::placeholder": {
-                  color: "white", // Placeholder text color
-                },
+              style={{
+                minWidth: "250px",
+                width: "40vw",
+                height: "40px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+                marginBottom: "5px",
+                paddingLeft: "5px",
+                borderRadius: "5px",
               }}
             />
 
-            <Button
+            <input
+              placeholder="Password"
+              required
+              name="password"
+              type="password"
+              style={{
+                minWidth: "250px",
+                width: "40vw",
+                height: "40px",
+                border: "none",
+                color: "white",
+                backgroundColor: "#272829",
+                marginBottom: "5px",
+                paddingLeft: "5px",
+                borderRadius: "5px",
+              }}
+            />
+
+            <button
               type="submit"
-              fullWidth
-              variant="contained"
-              sx={{
-                mt: 3,
-                mb: 2,
-                backgroundColor: "#DAFFFB", // Background color for the button
-                color: "black", // Text color for the button
+              style={{
+                color: "white",
+                backgroundColor: "#272829",
+                minWidth: "250px",
+                width: "40vw",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #ddd",
+                outline: "none",
+                height: "40px",
+                backgroundColor: "#61677A",
               }}
             >
               {isLogin ? "Sign In" : "Sign Up"}
-            </Button>
+            </button>
+
             <Grid container>
               <Grid item xs></Grid>
               <Grid item>

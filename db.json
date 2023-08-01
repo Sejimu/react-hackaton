@@ -8,7 +8,11 @@
       "price": 9,
       "category": "красота",
       "selected": false,
-      "likes": [],
+      "likes": [
+        "krasavachic@gmail.com",
+        "user1@gmail.com",
+        "user3@gmail.com"
+      ],
       "hovered": true,
       "user": "user1@gmail.com"
     },
@@ -20,7 +24,11 @@
       "price": 599,
       "category": "мода",
       "selected": true,
-      "likes": [],
+      "likes": [
+        "krasavachic@gmail.com",
+        "user1@gmail.com",
+        "user3@gmail.com"
+      ],
       "hovered": true,
       "user": "user1@gmail.com"
     },
@@ -32,7 +40,11 @@
       "price": 49.99,
       "category": "книги",
       "selected": false,
-      "likes": [],
+      "likes": [
+        "krasavachic@gmail.com",
+        "user1@gmail.com",
+        "user3@gmail.com"
+      ],
       "hovered": true,
       "user": "user2@gmail.com"
     },
@@ -226,6 +238,28 @@
       "likes": [],
       "hovered": true,
       "user": "user1@gmail.com"
+    },
+    {
+      "title": "krasavachick",
+      "description": "krasavachick",
+      "price": 22,
+      "photo": "ascc",
+      "category": "мебель",
+      "selected": false,
+      "likes": [],
+      "user": "krasavachic@gmail.com",
+      "id": 21
+    },
+    {
+      "title": "qwewq",
+      "description": "huinia",
+      "price": 9999,
+      "photo": "saSSAS",
+      "category": "электроника",
+      "selected": false,
+      "likes": [],
+      "user": "user1@gmail.com",
+      "id": 22
     }
   ],
   "users": [
@@ -249,9 +283,15 @@
       "photoURL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIwAuwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwUGB//EADwQAAEDAgQEAwYDBwMFAAAAAAEAAgMEEQUSITETQVFhBnGBFCIyQpGhByPBM0NSYrHR8RZy8BUlVLLh/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAECAwQFBv/EACgRAAICAgICAQQBBQAAAAAAAAABAhEDEgQTITFBBSIyUWEUQlJx8P/aAAwDAQACEQMRAD8AgYuoUeHZGucTyVZbfkukmzyzigXInyIjhpcNOyOoNw0siJ4aXDRYtQbIU3DRQZ2T5EbC6wQRKQjRORPlsixdYMIhZPwegQRxqF1U+mgie+VjyzbS43R9S72GBkmIuLXSacMaZQeZG9lRPlwg9fk6GH6TmzRcqpETFZLhIhjQBcS59L6ixsphivhkUlaMGbjvHLWQKIQnETeiKyJcNS2KdEDiMBLhojIpBiLE4g3DTcFFZU+TsnsReNMG4SXDCKyHonEZ6I2I9YKI0/B7lFiPspZOxT2E8aKciXDRGRLJ2Wc6tA/DS4aIydksvZFhQMWJZETk7Jwwc07FQNkTZCjBG3kHFOYHHaN30SsNGB5ExZYXsjm0k7v3ZU/YJjpa10OSRKOKTfoz4PARlpmzy4pOydx4n5bRz115k/ZcpjdTJxJYauWKWZr7MkuXkAaWIN7fZeoUdLXSytdPXEubG0SxNtYOA3A5et+y5DxZhIrfEVLkjYQYyyS5tnOpAO3YLzSy3ldnvIYqx6xPPKbFKqOSnigcG",
       "phone": "1234567",
       "id": 4
+    },
+    {
+      "email": "user3@gmail.com",
+      "name": "jopa",
+      "photoURL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIwAuwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwUGB//EADwQAAEDAgQEAwYDBwMFAAAAAAEAAgMEEQUSITETQVFhBnGBFCIyQpGhByPBM0NSYrHR8RZy8BUlVLLh/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAECAwQFBv/EACgRAAICAgICAQQBBQAAAAAAAAABAhEDEgQTITFBBSIyUWEUQlJx8P/aAAwDAQACEQMRAD8AgYuoUeHZGucTyVZbfkukmzyzigXInyIjhpcNOyOoNw0siJ4aXDRYtQbIU3DRQZ2T5EbC6wQRKQjRORPlsixdYMIhZPwegQRxqF1U+mgie+VjyzbS43R9S72GBkmIuLXSacMaZQeZG9lRPlwg9fk6GH6TmzRcqpETFZLhIhjQBcS59L6ixsphivhkUlaMGbjvHLWQKIQnETeiKyJcNS2KdEDiMBLhojIpBiLE4g3DTcFFZU+TsnsReNMG4SXDCKyHonEZ6I2I9YKI0/B7lFiPspZOxT2E8aKciXDRGRLJ2Wc6tA/DS4aIydksvZFhQMWJZETk7Jwwc07FQNkTZCjBG3kHFOYHHaN30SsNGB5ExZYXsjm0k7v3ZU/YJjpa10OSRKOKTfoz4PARlpmzy4pOydx4n5bRz115k/ZcpjdTJxJYauWKWZr7MkuXkAaWIN7fZeoUdLXSytdPXEubG0SxNtYOA3A5et+y5DxZhIrfEVLkjYQYyyS5tnOpAO3YLzSy3ldnvIYqx6xPPKbFKqOSnigcG",
+      "phone": "",
+      "id": 5
     }
   ],
-
   "comments": [
     {
       "productId": "3",
@@ -351,6 +391,101 @@
       "email": "user2@gmail.com",
       "itemId": 2,
       "id": "user22"
+    },
+    {
+      "item": {
+        "id": 5,
+        "title": "bbca",
+        "photo": "https://avatars.mds.yandex.net/get-mpic/4901709/img_id6621446873381905813.png/orig",
+        "description": "Служат дополнительным источником энергии, повышают выносливость и силовые показатели.",
+        "price": 9.9,
+        "category": "спорт",
+        "selected": true,
+        "likes": [
+          "user1@gmail.com",
+          "krasavachic@gmail.com"
+        ],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 5,
+      "id": "krasavachic5"
+    },
+    {
+      "item": {
+        "id": 4,
+        "title": "  Брат",
+        "photo": "https://avatars.mds.yandex.net/get-mpic/7979862/img_id1599559408076523691.jpeg/orig",
+        "description": "Фильм Алексея Балабанова Брат вышел в 1997 году и практически мгновенно стал классикой и разлетелся на цитаты. Спустя 25 лет Брат не теряет своей популярности и сегодня",
+        "price": 49.99,
+        "category": "книги",
+        "selected": false,
+        "likes": [],
+        "hovered": true,
+        "user": "user2@gmail.com"
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 4,
+      "id": "krasavachic4"
+    },
+    {
+      "item": {
+        "id": 3,
+        "title": "Book",
+        "photo": "https://avatars.mds.yandex.net/get-mpic/7150287/img_id5951292038387306776.jpeg/orig",
+        "description": "Книга имиджмейкеров Наталии Найденской и Инессы Трубецковой — источник вдохновения и практическое руководство для тех, кто хочет безошибочно подбирать цвета одежды, аксессуаров и макияжа, чтобы всегда выглядеть стильно и неотразимо.",
+        "price": 599,
+        "category": "мода",
+        "selected": true,
+        "likes": [],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "krasavachic@gmail.com",
+      "itemId": 3,
+      "id": "krasavachic3"
+    },
+    {
+      "item": {
+        "id": 3,
+        "title": "Book",
+        "photo": "https://avatars.mds.yandex.net/get-mpic/7150287/img_id5951292038387306776.jpeg/orig",
+        "description": "Книга имиджмейкеров Наталии Найденской и Инессы Трубецковой — источник вдохновения и практическое руководство для тех, кто хочет безошибочно подбирать цвета одежды, аксессуаров и макияжа, чтобы всегда выглядеть стильно и неотразимо.",
+        "price": 599,
+        "category": "мода",
+        "selected": true,
+        "likes": [
+          "krasavachic@gmail.com",
+          "user1@gmail.com"
+        ],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "user1@gmail.com",
+      "itemId": 3,
+      "id": "user13"
+    },
+    {
+      "item": {
+        "id": 4,
+        "title": "  Брат",
+        "photo": "https://avatars.mds.yandex.net/get-mpic/7979862/img_id1599559408076523691.jpeg/orig",
+        "description": "Фильм Алексея Балабанова Брат вышел в 1997 году и практически мгновенно стал классикой и разлетелся на цитаты. Спустя 25 лет Брат не теряет своей популярности и сегодня",
+        "price": 49.99,
+        "category": "книги",
+        "selected": false,
+        "likes": [
+          "krasavachic@gmail.com",
+          "user1@gmail.com",
+          "user3@gmail.com"
+        ],
+        "hovered": true,
+        "user": "user2@gmail.com"
+      },
+      "email": "user3@gmail.com",
+      "itemId": 4,
+      "id": "user34"
     }
   ]
 }
