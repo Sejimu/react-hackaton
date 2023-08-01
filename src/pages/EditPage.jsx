@@ -215,7 +215,7 @@ export default function EditPage() {
                 backgroundColor: "#61677A",
               }}
             >
-              Добавить новый продукт
+              Change
             </button>
           </Box>
         </Box>

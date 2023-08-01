@@ -94,7 +94,7 @@ export default function AuthPage() {
                   style={{
                     minWidth: "250px",
                     width: "40vw",
-                    height: "35px",
+                    height: "40px",
                     border: "none",
                     color: "white",
                     backgroundColor: "#272829",
@@ -111,7 +111,7 @@ export default function AuthPage() {
                   style={{
                     minWidth: "250px",
                     width: "40vw",
-                    height: "35px",
+                    height: "40px",
                     border: "none",
                     color: "white",
                     backgroundColor: "#272829",
@@ -125,10 +125,11 @@ export default function AuthPage() {
                   placeholder="Phone"
                   required
                   name="phone"
+                  type="number"
                   style={{
                     minWidth: "250px",
                     width: "40vw",
-                    height: "35px",
+                    height: "40px",
                     border: "none",
                     color: "white",
                     backgroundColor: "#272829",
@@ -147,7 +148,7 @@ export default function AuthPage() {
               style={{
                 minWidth: "250px",
                 width: "40vw",
-                height: "35px",
+                height: "40px",
                 border: "none",
                 color: "white",
                 backgroundColor: "#272829",
@@ -161,10 +162,11 @@ export default function AuthPage() {
               placeholder="Password"
               required
               name="password"
+              type="password"
               style={{
                 minWidth: "250px",
                 width: "40vw",
-                height: "35px",
+                height: "40px",
                 border: "none",
                 color: "white",
                 backgroundColor: "#272829",
@@ -185,8 +187,7 @@ export default function AuthPage() {
                 borderRadius: "5px",
                 border: "1px solid #ddd",
                 outline: "none",
-                height: "35px",
-                marginTop: "5px",
+                height: "40px",
                 backgroundColor: "#61677A",
               }}
             >
