@@ -10,8 +10,8 @@
       "selected": false,
       "likes": [
         "krasavachic@gmail.com",
-        "user1@gmail.com",
-        "user3@gmail.com"
+        "user3@gmail.com",
+        "admin1@gmail.com"
       ],
       "hovered": true,
       "user": "user1@gmail.com"
@@ -26,8 +26,9 @@
       "selected": true,
       "likes": [
         "krasavachic@gmail.com",
-        "user1@gmail.com",
-        "user3@gmail.com"
+        "user3@gmail.com",
+        "admin1@gmail.com",
+        "user1@gmail.com"
       ],
       "hovered": true,
       "user": "user1@gmail.com"
@@ -42,8 +43,8 @@
       "selected": false,
       "likes": [
         "krasavachic@gmail.com",
-        "user1@gmail.com",
-        "user3@gmail.com"
+        "user3@gmail.com",
+        "admin1@gmail.com"
       ],
       "hovered": true,
       "user": "user2@gmail.com"
@@ -95,7 +96,10 @@
       "price": 599,
       "category": "книги",
       "selected": true,
-      "likes": [],
+      "likes": [
+        "user1@gmail.com",
+        "user2@gmail.com"
+      ],
       "hovered": true,
       "user": "user1@gmail.com"
     },
@@ -304,6 +308,18 @@
       "comment": "dsadsadasasdsaddas",
       "userEmail": "krasavachic@gmail.com",
       "id": 2
+    },
+    {
+      "productId": "3",
+      "comment": "qwertyu\n",
+      "userEmail": "user2@gmail.com",
+      "id": 3
+    },
+    {
+      "productId": "3",
+      "comment": "qwertyu",
+      "userEmail": "user2@gmail.com",
+      "id": 4
     }
   ],
   "favorite": [
@@ -374,23 +390,6 @@
       "email": "user2@gmail.com",
       "itemId": 5,
       "id": "user25"
-    },
-    {
-      "item": {
-        "id": 2,
-        "title": "Пример товара 2",
-        "photo": "https://avatars.mds.yandex.net/i?id=77257e240f566aba747340cea26743bb90c13757-8497448-images-thumbs&n=13",
-        "description": "Описание товара 2",
-        "price": 999.5,
-        "category": "красота",
-        "selected": false,
-        "likes": [],
-        "hovered": true,
-        "user": "user1@gmail.com"
-      },
-      "email": "user2@gmail.com",
-      "itemId": 2,
-      "id": "user22"
     },
     {
       "item": {
@@ -486,6 +485,27 @@
       "email": "user3@gmail.com",
       "itemId": 4,
       "id": "user34"
+    },
+    {
+      "item": {
+        "id": 3,
+        "title": "Book",
+        "photo": "https://avatars.mds.yandex.net/get-mpic/7150287/img_id5951292038387306776.jpeg/orig",
+        "description": "Книга имиджмейкеров Наталии Найденской и Инессы Трубецковой — источник вдохновения и практическое руководство для тех, кто хочет безошибочно подбирать цвета одежды, аксессуаров и макияжа, чтобы всегда выглядеть стильно и неотразимо.",
+        "price": 599,
+        "category": "мода",
+        "selected": true,
+        "likes": [
+          "krasavachic@gmail.com",
+          "user3@gmail.com",
+          "admin1@gmail.com"
+        ],
+        "hovered": true,
+        "user": "user1@gmail.com"
+      },
+      "email": "user2@gmail.com",
+      "itemId": 3,
+      "id": "user23"
     }
   ]
 }

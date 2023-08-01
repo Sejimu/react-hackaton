@@ -26,6 +26,8 @@ function getCartFromLS() {
 function CartContext({ children }) {
   const [cart, setCart] = useState(initState);
 
+  console.log(getCartFromLS());
+
   function getCart() {
     const data = getCartFromLS();
     setCart(data);
